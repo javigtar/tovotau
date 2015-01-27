@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
 		FB6298381A6D1DC800582767 /* leonardoDantes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB6298371A6D1DC800582767 /* leonardoDantes.jpg */; };
 		FB7EB73C1A6664C6002E699D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73B1A6664C6002E699D /* main.m */; };
 		FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73E1A6664C6002E699D /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
+		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
 		FB6298371A6D1DC800582767 /* leonardoDantes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leonardoDantes.jpg; sourceTree = "<group>"; };
 		FB7EB7361A6664C6002E699D /* tovotau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tovotau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB73A1A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				FB7EB73E1A6664C6002E699D /* AppDelegate.m */,
 				FB7EB7401A6664C6002E699D /* ViewController.h */,
 				FB7EB7411A6664C6002E699D /* ViewController.m */,
+				FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */,
+				FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */,
 				FB7EB7431A6664C6002E699D /* Main.storyboard */,
 				FB7EB7461A6664C6002E699D /* Images.xcassets */,
 				FB7EB7481A6664C6002E699D /* LaunchScreen.xib */,
@@ -233,6 +238,7 @@
 			files = (
 				FB7EB7421A6664C6002E699D /* ViewController.m in Sources */,
 				FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */,
+				FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */,
 				FB7EB73C1A6664C6002E699D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
