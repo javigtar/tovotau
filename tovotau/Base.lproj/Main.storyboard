@@ -180,6 +180,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Reproduciendo" id="m00-6c-DUK"/>
+                    <connections>
+                        <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="A9r-vE-oGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -444,25 +447,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bez-d8-T5B" id="yRb-1q-FGB">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-gH-aGk">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="88" id="0eO-lQ-lFH"/>
-                                                <constraint firstAttribute="height" constant="80" id="tpT-oD-puw"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="0eO-lQ-lFH"/>
-                                                    <exclude reference="tpT-oD-puw"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="0eO-lQ-lFH"/>
-                                                    <include reference="tpT-oD-puw"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título Canción" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkm-5h-A7V">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <constraints>
@@ -502,6 +486,25 @@
                                                 <rect key="frame" x="8" y="0.0" width="42" height="21"/>
                                             </variation>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-gH-aGk">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="88" id="0eO-lQ-lFH"/>
+                                                <constraint firstAttribute="height" constant="80" id="tpT-oD-puw"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0eO-lQ-lFH"/>
+                                                    <exclude reference="tpT-oD-puw"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="0eO-lQ-lFH"/>
+                                                    <include reference="tpT-oD-puw"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="gQD-gH-aGk" firstAttribute="top" secondItem="yRb-1q-FGB" secondAttribute="topMargin" constant="4" id="97Q-uI-KAZ">
@@ -517,10 +520,10 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="gQD-gH-aGk"/>
                                             <exclude reference="Lkm-5h-A7V"/>
                                             <exclude reference="U9v-FT-gtF"/>
                                             <exclude reference="aWC-Ln-6KA"/>
+                                            <exclude reference="gQD-gH-aGk"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="Mh0-mD-Zxn"/>
@@ -531,10 +534,10 @@
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="gQD-gH-aGk"/>
                                             <include reference="Lkm-5h-A7V"/>
                                             <include reference="U9v-FT-gtF"/>
                                             <include reference="aWC-Ln-6KA"/>
+                                            <include reference="gQD-gH-aGk"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="Mh0-mD-Zxn"/>
