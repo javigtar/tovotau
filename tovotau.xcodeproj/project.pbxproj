@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
+		FB4D21B11A82118E00B3125F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B01A82118E00B3125F /* CoreText.framework */; };
+		FB4D21B31A8211A100B3125F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B21A8211A100B3125F /* QuartzCore.framework */; };
+		FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B41A8211AA00B3125F /* UIKit.framework */; };
+		FB4D21B71A8211EF00B3125F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B61A8211EF00B3125F /* Foundation.framework */; };
+		FB4D21B91A82120500B3125F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B81A82120500B3125F /* CoreGraphics.framework */; };
 		FB6298381A6D1DC800582767 /* leonardoDantes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB6298371A6D1DC800582767 /* leonardoDantes.jpg */; };
 		FB7EB73C1A6664C6002E699D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73B1A6664C6002E699D /* main.m */; };
 		FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73E1A6664C6002E699D /* AppDelegate.m */; };
@@ -37,6 +42,11 @@
 /* Begin PBXFileReference section */
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
 		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
+		FB4D21B01A82118E00B3125F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		FB4D21B21A8211A100B3125F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB4D21B41A8211AA00B3125F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB4D21B61A8211EF00B3125F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB4D21B81A82120500B3125F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FB6298371A6D1DC800582767 /* leonardoDantes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leonardoDantes.jpg; sourceTree = "<group>"; };
 		FB7EB7361A6664C6002E699D /* tovotau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tovotau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB73A1A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4D21B91A82120500B3125F /* CoreGraphics.framework in Frameworks */,
+				FB4D21B71A8211EF00B3125F /* Foundation.framework in Frameworks */,
+				FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */,
+				FB4D21B31A8211A100B3125F /* QuartzCore.framework in Frameworks */,
+				FB4D21B11A82118E00B3125F /* CoreText.framework in Frameworks */,
 				FBBEA1DA1A7F95F3009A9E37 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,18 +97,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB6298361A6D1DB100582767 /* imagenes */ = {
+		FB4D21AC1A8210B500B3125F /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
+				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
+		FB4D21AD1A8210FE00B3125F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB7EB7401A6664C6002E699D /* ViewController.h */,
+				FB7EB7411A6664C6002E699D /* ViewController.m */,
+				FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */,
+				FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */,
+				FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */,
+				FBBEA1CF1A7F945C009A9E37 /* ModCancionViewController.h */,
+				FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */,
+				FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB4D21AE1A82112700B3125F /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA1CA1A7F945C009A9E37 /* Canciones.h */,
+				FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */,
+				FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */,
+				FBBEA1D21A7F945C009A9E37 /* Canciones.m */,
+			);
+			name = Clases;
+			sourceTree = "<group>";
+		};
+		FB4D21AF1A82115900B3125F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB4D21B81A82120500B3125F /* CoreGraphics.framework */,
+				FB4D21B61A8211EF00B3125F /* Foundation.framework */,
+				FB4D21B41A8211AA00B3125F /* UIKit.framework */,
+				FB4D21B21A8211A100B3125F /* QuartzCore.framework */,
+				FB4D21B01A82118E00B3125F /* CoreText.framework */,
+			);
+			name = Frameworks;
+			path = tovotau;
+			sourceTree = "<group>";
+		};
+		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
 				FB6298371A6D1DC800582767 /* leonardoDantes.jpg */,
 			);
-			name = imagenes;
+			name = Imagenes;
 			sourceTree = "<group>";
 		};
 		FB7EB72D1A6664C6002E699D = {
 			isa = PBXGroup;
 			children = (
 				FB7EB7381A6664C6002E699D /* tovotau */,
+				FB4D21AF1A82115900B3125F /* Frameworks */,
 				FB7EB7521A6664C6002E699D /* tovotauTests */,
 				FB7EB7371A6664C6002E699D /* Products */,
 			);
@@ -111,24 +175,13 @@
 		FB7EB7381A6664C6002E699D /* tovotau */ = {
 			isa = PBXGroup;
 			children = (
-				FB6298361A6D1DB100582767 /* imagenes */,
+				FB7EB7431A6664C6002E699D /* Main.storyboard */,
 				FB7EB73D1A6664C6002E699D /* AppDelegate.h */,
 				FB7EB73E1A6664C6002E699D /* AppDelegate.m */,
-				FB7EB7401A6664C6002E699D /* ViewController.h */,
-				FB7EB7411A6664C6002E699D /* ViewController.m */,
-				FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */,
-				FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */,
-				FB7EB7431A6664C6002E699D /* Main.storyboard */,
-				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
-				FBBEA1CA1A7F945C009A9E37 /* Canciones.h */,
-				FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */,
-				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
-				FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */,
-				FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */,
-				FBBEA1CF1A7F945C009A9E37 /* ModCancionViewController.h */,
-				FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */,
-				FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */,
-				FBBEA1D21A7F945C009A9E37 /* Canciones.m */,
+				FB4D21AE1A82112700B3125F /* Clases */,
+				FB6298361A6D1DB100582767 /* Imagenes */,
+				FB4D21AC1A8210B500B3125F /* SQLite */,
+				FB4D21AD1A8210FE00B3125F /* ViewControllers */,
 				FB7EB7461A6664C6002E699D /* Images.xcassets */,
 				FB7EB7481A6664C6002E699D /* LaunchScreen.xib */,
 				FB7EB7391A6664C6002E699D /* Supporting Files */,
