@@ -36,7 +36,7 @@
     self.proximasCanciones.fadeLength = 15.0f;
     self.proximasCanciones.leadingBuffer = 40.0f;
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"prueba"];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[self crearStringProximasCanciones]];
     [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0, 21)];
     [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
     [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
@@ -60,7 +60,7 @@
      }];
     
 }
- */
+*/
 
 /*
 #pragma mark - Navigation
@@ -78,9 +78,9 @@
     
     NSMutableString *proximasCanciones = [[NSMutableString alloc] init];
     
-    [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
+    [proximasCanciones appendFormat:@" %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
     
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i < 3; i++) {
         
         [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[i]).nombreCancion];
     }    
