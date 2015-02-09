@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ReproduciendoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *banner;
+
 
 
 

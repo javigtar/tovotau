@@ -30,6 +30,13 @@
     //Añadimos las canciones de la BD a una MutableArray
     self.listaCanciones = [cancionesDAO obtenerCanciones];
     
+   
+   //Bucle que se ejecutara cada 15 segundos llamando a la funcion para llamar al banner
+    [NSTimer scheduledTimerWithTimeInterval:15.0f
+                                     target:self selector:@selector(cambioImagenTemporal) userInfo:nil repeats:YES];
+    
+    
+    
     // Animación del label de la lista de canciones
     self.proximasCanciones.marqueeType = MLContinuous;
     self.proximasCanciones.scrollDuration = 8.0;
@@ -37,11 +44,14 @@
     self.proximasCanciones.leadingBuffer = 40.0f;
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"prueba"];
-    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0, 21)];
+    /*
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0,5)];
     [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
     [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
     [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f] range:NSMakeRange(21, attributedString.length - 21)];
+     */
     self.proximasCanciones.attributedText = attributedString;
+     
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,6 +96,43 @@
     }    
     
     return proximasCanciones;
+}
+
+
+-(void)cambiarImagenBanner
+{
+ 
+    //genero un random entre 4 ya que solo tenemos 3 imagenes de ese modo alguna vez no habra banner
+    int r = rand() % 4;
+
+
+    NSString *cancion = [[NSString alloc]initWithFormat:@"%d.jpg",r ];
+    //cambio la imagen con efecto de imagen dissolve
+    UIImage * toImage = [UIImage imageNamed:cancion];
+    [UIView transitionWithView:self.banner
+                      duration:5.0
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        self.banner.image = toImage;
+                    } completion:nil];
+    
+    
+    
+
+}
+
+-(void)cambioImagenTemporal{//Creo un hilo de proceso nuevo para no perjudicar a la vista cada vez que llame a la funcion cambiarImagen.
+ 
+    NSThread* ThreadMonstruo2 = [[NSThread alloc] initWithTarget:self
+                                                        selector:@selector(cambiarImagenBanner)
+                                                          object: nil];
+    
+    
+    
+    [ThreadMonstruo2 start];
+    
+    
+    
 }
 
 @end
