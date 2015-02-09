@@ -31,6 +31,9 @@
 		FBBEA1D71A7F945C009A9E37 /* ListaCancionesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */; };
 		FBBEA1D81A7F945C009A9E37 /* Canciones.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D21A7F945C009A9E37 /* Canciones.m */; };
 		FBBEA1DA1A7F95F3009A9E37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */; };
+		FBDDBCF61A88BBFA00513252 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */; };
+		FBDDBCFE1A88BC4B00513252 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */; };
+		FBDDBD011A88BD7600513252 /* EscanerQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBD001A88BD7600513252 /* EscanerQRViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,10 @@
 		FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaCancionesTableViewController.m; sourceTree = "<group>"; };
 		FBBEA1D21A7F945C009A9E37 /* Canciones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Canciones.m; sourceTree = "<group>"; };
 		FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FBDDBCFF1A88BD7600513252 /* EscanerQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscanerQRViewController.h; sourceTree = "<group>"; };
+		FBDDBD001A88BD7600513252 /* EscanerQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscanerQRViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDDBCFE1A88BC4B00513252 /* libiconv.dylib in Frameworks */,
+				FBDDBCF61A88BBFA00513252 /* AVFoundation.framework in Frameworks */,
 				FB4D21B91A82120500B3125F /* CoreGraphics.framework in Frameworks */,
 				FB4D21B71A8211EF00B3125F /* Foundation.framework in Frameworks */,
 				FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */,
@@ -136,6 +145,8 @@
 				FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */,
 				FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */,
 				FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */,
+				FBDDBCFF1A88BD7600513252 /* EscanerQRViewController.h */,
+				FBDDBD001A88BD7600513252 /* EscanerQRViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +167,8 @@
 		FB4D21AF1A82115900B3125F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */,
+				FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */,
 				FB4D21B81A82120500B3125F /* CoreGraphics.framework */,
 				FB4D21B61A8211EF00B3125F /* Foundation.framework */,
 				FB4D21B41A8211AA00B3125F /* UIKit.framework */,
@@ -349,6 +362,7 @@
 				FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */,
 				FB4D21BC1A8214E600B3125F /* MarqueeLabel.m in Sources */,
 				FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */,
+				FBDDBD011A88BD7600513252 /* EscanerQRViewController.m in Sources */,
 				FB7EB73C1A6664C6002E699D /* main.m in Sources */,
 				FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */,
 			);
@@ -479,6 +493,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tovotau",
+					"$(PROJECT_DIR)/tovotau/ZBarSDK",
 				);
 				PRODUCT_NAME = tovotau;
 			};
@@ -493,6 +508,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tovotau",
+					"$(PROJECT_DIR)/tovotau/ZBarSDK",
 				);
 				PRODUCT_NAME = tovotau;
 			};

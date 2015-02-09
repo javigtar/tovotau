@@ -70,7 +70,7 @@
      }];
     
 }
- */
+*/
 
 /*
 #pragma mark - Navigation
@@ -88,9 +88,9 @@
     
     NSMutableString *proximasCanciones = [[NSMutableString alloc] init];
     
-    [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
+    [proximasCanciones appendFormat:@" %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
     
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i < 3; i++) {
         
         [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[i]).nombreCancion];
     }    
