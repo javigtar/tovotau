@@ -96,7 +96,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Animado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ob-cl-GcH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Animado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ob-cl-GcH" customClass="MarqueeLabel">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="gOp-yj-BMB"/>
@@ -181,7 +181,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Reproduciendo" id="m00-6c-DUK"/>
                     <connections>
-                        <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="A9r-vE-oGL"/>
+                        <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="FXc-4g-jub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

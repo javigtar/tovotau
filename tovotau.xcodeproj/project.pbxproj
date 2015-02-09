@@ -13,6 +13,7 @@
 		FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B41A8211AA00B3125F /* UIKit.framework */; };
 		FB4D21B71A8211EF00B3125F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B61A8211EF00B3125F /* Foundation.framework */; };
 		FB4D21B91A82120500B3125F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B81A82120500B3125F /* CoreGraphics.framework */; };
+		FB4D21BC1A8214E600B3125F /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4D21BB1A8214E600B3125F /* MarqueeLabel.m */; };
 		FB6298381A6D1DC800582767 /* leonardoDantes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB6298371A6D1DC800582767 /* leonardoDantes.jpg */; };
 		FB7EB73C1A6664C6002E699D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73B1A6664C6002E699D /* main.m */; };
 		FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB73E1A6664C6002E699D /* AppDelegate.m */; };
@@ -47,6 +48,8 @@
 		FB4D21B41A8211AA00B3125F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB4D21B61A8211EF00B3125F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB4D21B81A82120500B3125F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB4D21BA1A8214E600B3125F /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
+		FB4D21BB1A8214E600B3125F /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
 		FB6298371A6D1DC800582767 /* leonardoDantes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leonardoDantes.jpg; sourceTree = "<group>"; };
 		FB7EB7361A6664C6002E699D /* tovotau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tovotau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB73A1A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,9 +116,9 @@
 				FB7EB7411A6664C6002E699D /* ViewController.m */,
 				FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */,
 				FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */,
-				FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */,
 				FBBEA1CF1A7F945C009A9E37 /* ModCancionViewController.h */,
 				FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */,
+				FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */,
 				FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */,
 			);
 			name = ViewControllers;
@@ -124,9 +127,11 @@
 		FB4D21AE1A82112700B3125F /* Clases */ = {
 			isa = PBXGroup;
 			children = (
-				FBBEA1CA1A7F945C009A9E37 /* Canciones.h */,
+				FB4D21BA1A8214E600B3125F /* MarqueeLabel.h */,
+				FB4D21BB1A8214E600B3125F /* MarqueeLabel.m */,
 				FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */,
 				FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */,
+				FBBEA1CA1A7F945C009A9E37 /* Canciones.h */,
 				FBBEA1D21A7F945C009A9E37 /* Canciones.m */,
 			);
 			name = Clases;
@@ -322,6 +327,7 @@
 				FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */,
 				FB7EB7421A6664C6002E699D /* ViewController.m in Sources */,
 				FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */,
+				FB4D21BC1A8214E600B3125F /* MarqueeLabel.m in Sources */,
 				FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */,
 				FB7EB73C1A6664C6002E699D /* main.m in Sources */,
 				FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */,

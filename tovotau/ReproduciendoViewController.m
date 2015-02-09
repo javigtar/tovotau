@@ -7,10 +7,14 @@
 //
 
 #import "ReproduciendoViewController.h"
+#import "MarqueeLabel.h"
+#import "CancionesDAO.h"
+#import "Canciones.h"
 
 @interface ReproduciendoViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *proximasCanciones;
+@property (weak, nonatomic) IBOutlet MarqueeLabel *proximasCanciones;
+@property (nonatomic, strong) NSMutableArray *listaCanciones;
 
 @end
 
@@ -20,12 +24,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.proximasCanciones.text = @"Cancion 1, Cancion 2, Cancion 3, Cancion 4, Cancion 5, Cancion 6, Cancion 7, Cancion 8, Cancion 9, Cancion 10";
+    //Instanciamos la clase engargada de obtener las canciones de la BD
+    CancionesDAO *cancionesDAO = [[CancionesDAO alloc] init];
     
-    [self labelAnimation];
-    [NSTimer scheduledTimerWithTimeInterval:7.0 target:self selector:@selector(labelAnimation)
-                                   userInfo:nil
-                                    repeats:YES];
+    //Añadimos las canciones de la BD a una MutableArray
+    self.listaCanciones = [cancionesDAO obtenerCanciones];
+    
+    // Animación del label de la lista de canciones
+    self.proximasCanciones.marqueeType = MLContinuous;
+    self.proximasCanciones.scrollDuration = 8.0;
+    self.proximasCanciones.fadeLength = 15.0f;
+    self.proximasCanciones.leadingBuffer = 40.0f;
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"This is a long string, that's also an attributed string, which works just as well!"];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0, 21)];
+    [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f] range:NSMakeRange(21, attributedString.length - 21)];
+    self.proximasCanciones.attributedText = attributedString;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,5 +70,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+//Metodo encargado de añadir a un MutableString las proximas canciones
+-(NSMutableString*)crearStringProximasCanciones{
+    
+    NSMutableString *proximasCanciones = [[NSMutableString alloc] init];
+    
+    [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
+    
+    for (int i = 1; i < 5; i++) {
+        
+        [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[i]).nombreCancion];
+    }    
+    
+    return proximasCanciones;
+}
 
 @end
