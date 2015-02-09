@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pYv-Fi-E42">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pYv-Fi-E42">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -105,7 +105,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_bar.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-DZ-VHp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-DZ-VHp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -145,18 +145,18 @@
                                 <exclude reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GCR-p8-G4a"/>
-                                <exclude reference="PV6-hn-ah7"/>
-                                <exclude reference="vDt-UX-Gb8"/>
                                 <exclude reference="iZN-fJ-gS8"/>
-                                <exclude reference="Imc-vP-zOf"/>
-                                <exclude reference="ZLJ-av-1rn"/>
-                                <exclude reference="vjf-Jd-AbU"/>
-                                <exclude reference="FNG-MK-DWZ"/>
-                                <exclude reference="czV-Sg-1r3"/>
                                 <exclude reference="4GU-de-qB4"/>
                                 <exclude reference="G5O-L0-crj"/>
                                 <exclude reference="zbJ-mi-Cwr"/>
+                                <exclude reference="FNG-MK-DWZ"/>
+                                <exclude reference="czV-Sg-1r3"/>
+                                <exclude reference="GCR-p8-G4a"/>
+                                <exclude reference="PV6-hn-ah7"/>
+                                <exclude reference="vDt-UX-Gb8"/>
+                                <exclude reference="Imc-vP-zOf"/>
+                                <exclude reference="ZLJ-av-1rn"/>
+                                <exclude reference="vjf-Jd-AbU"/>
                                 <exclude reference="ENu-0M-6a9"/>
                                 <exclude reference="UbJ-tr-t66"/>
                                 <exclude reference="XNW-os-VQA"/>
@@ -173,18 +173,18 @@
                                 <include reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GCR-p8-G4a"/>
-                                <include reference="PV6-hn-ah7"/>
-                                <include reference="vDt-UX-Gb8"/>
                                 <include reference="iZN-fJ-gS8"/>
-                                <include reference="Imc-vP-zOf"/>
-                                <include reference="ZLJ-av-1rn"/>
-                                <include reference="vjf-Jd-AbU"/>
-                                <include reference="FNG-MK-DWZ"/>
-                                <include reference="czV-Sg-1r3"/>
                                 <include reference="4GU-de-qB4"/>
                                 <include reference="G5O-L0-crj"/>
                                 <include reference="zbJ-mi-Cwr"/>
+                                <include reference="FNG-MK-DWZ"/>
+                                <include reference="czV-Sg-1r3"/>
+                                <include reference="GCR-p8-G4a"/>
+                                <include reference="PV6-hn-ah7"/>
+                                <include reference="vDt-UX-Gb8"/>
+                                <include reference="Imc-vP-zOf"/>
+                                <include reference="ZLJ-av-1rn"/>
+                                <include reference="vjf-Jd-AbU"/>
                                 <include reference="ENu-0M-6a9"/>
                                 <include reference="UbJ-tr-t66"/>
                                 <include reference="XNW-os-VQA"/>
@@ -269,16 +269,16 @@
                                 <exclude reference="t0G-OL-kvJ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CMH-Eh-YOY"/>
+                                <exclude reference="8Ed-h0-oS5"/>
+                                <exclude reference="iTU-GN-izu"/>
+                                <exclude reference="M3l-zg-Wlx"/>
+                                <exclude reference="RWq-90-HF3"/>
+                                <exclude reference="slm-uI-2y0"/>
                                 <exclude reference="03V-oS-Qs7"/>
                                 <exclude reference="4Gy-59-1EK"/>
                                 <exclude reference="7uI-RF-QTQ"/>
                                 <exclude reference="zo9-8k-KNu"/>
-                                <exclude reference="M3l-zg-Wlx"/>
-                                <exclude reference="RWq-90-HF3"/>
-                                <exclude reference="slm-uI-2y0"/>
-                                <exclude reference="8Ed-h0-oS5"/>
-                                <exclude reference="iTU-GN-izu"/>
-                                <exclude reference="CMH-Eh-YOY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -288,16 +288,16 @@
                                 <include reference="t0G-OL-kvJ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="CMH-Eh-YOY"/>
+                                <include reference="8Ed-h0-oS5"/>
+                                <include reference="iTU-GN-izu"/>
+                                <include reference="M3l-zg-Wlx"/>
+                                <include reference="RWq-90-HF3"/>
+                                <include reference="slm-uI-2y0"/>
                                 <include reference="03V-oS-Qs7"/>
                                 <include reference="4Gy-59-1EK"/>
                                 <include reference="7uI-RF-QTQ"/>
                                 <include reference="zo9-8k-KNu"/>
-                                <include reference="M3l-zg-Wlx"/>
-                                <include reference="RWq-90-HF3"/>
-                                <include reference="slm-uI-2y0"/>
-                                <include reference="8Ed-h0-oS5"/>
-                                <include reference="iTU-GN-izu"/>
-                                <include reference="CMH-Eh-YOY"/>
                             </mask>
                         </variation>
                     </view>
@@ -613,7 +613,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="banner_bar.jpg" width="368" height="85"/>
         <image name="leonardoDantes.jpg" width="250" height="257"/>
     </resources>
 </document>
