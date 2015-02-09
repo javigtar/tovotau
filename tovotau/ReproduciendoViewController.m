@@ -36,7 +36,7 @@
     self.proximasCanciones.fadeLength = 15.0f;
     self.proximasCanciones.leadingBuffer = 40.0f;
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"This is a long string, that's also an attributed string, which works just as well!"];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"prueba"];
     [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0, 21)];
     [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
     [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
@@ -49,7 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 -(void)labelAnimation
 {
     [UIView animateWithDuration:7.0f delay:0.0f options:UIViewAnimationOptionTransitionNone animations:^{
@@ -60,6 +60,7 @@
      }];
     
 }
+ */
 
 /*
 #pragma mark - Navigation
