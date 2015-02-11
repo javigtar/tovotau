@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Canciones : NSObject{
+@interface Cancion : NSObject{
    
 }
 
