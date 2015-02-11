@@ -58,9 +58,19 @@
     cell.textLabel.text =cancion.nombreCancion;
      */
     
+    //Obtenemos la canción según el índice de la tabla
     Cancion *cancion = [self.listaCanciones cancionSegunIndice:indexPath.row];
     
+    //Obtenemos la referencia a la celda
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cancion" forIndexPath:indexPath];
+    
+    //Asigna a nombre el UILabel de la vista con la etiqueta 2
+    UILabel *artista = (UILabel*)[self.view viewWithTag:2];
+    artista.text = cancion.artista;
+    
+    //Asigna a nombre el UILabel de la vista con la etiqueta 2
+    UILabel *tituloCancion = (UILabel*)[self.view viewWithTag:3];
+    tituloCancion.text = cancion.nombreCancion;
      
     return cell;
     
