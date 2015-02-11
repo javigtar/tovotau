@@ -11,6 +11,7 @@
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
 		FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD4A1A88C93D004CCF14 /* 3.jpg */; };
+		FB446BFB1A8B3E6600068D7C /* definitiva.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */; };
 		FB4D21B11A82118E00B3125F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B01A82118E00B3125F /* CoreText.framework */; };
 		FB4D21B31A8211A100B3125F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B21A8211A100B3125F /* QuartzCore.framework */; };
 		FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B41A8211AA00B3125F /* UIKit.framework */; };
@@ -52,6 +53,7 @@
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		FB29CD471A88B9C0004CCF14 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		FB29CD4A1A88C93D004CCF14 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		FB4D21B01A82118E00B3125F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		FB4D21B21A8211A100B3125F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB4D21B41A8211AA00B3125F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
+				FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */,
 				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
 			);
 			name = SQLite;
@@ -334,6 +337,7 @@
 				FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */,
 				FB7EB7451A6664C6002E699D /* Main.storyboard in Resources */,
 				FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */,
+				FB446BFB1A8B3E6600068D7C /* definitiva.sqlite in Resources */,
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
 				FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,

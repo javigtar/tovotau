@@ -18,9 +18,9 @@
     rutas = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     dirDocs = [rutas objectAtIndex:0];
     NSFileManager *fileMgr = [NSFileManager defaultManager];
-    rutaBD = [[NSString alloc] initWithString:[dirDocs stringByAppendingPathComponent:@"mydatabase.sqlite"]];
+    rutaBD = [[NSString alloc] initWithString:[dirDocs stringByAppendingPathComponent:@"definitiva.sqlite"]];
     if([fileMgr fileExistsAtPath:rutaBD] == NO){
-        [fileMgr copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mydatabase.sqlite"] toPath:rutaBD error:NULL];
+        [fileMgr copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"definitiva.sqlite"] toPath:rutaBD error:NULL];
     }
     return rutaBD;
 }
