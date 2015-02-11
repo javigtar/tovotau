@@ -9,7 +9,7 @@
 #import "ReproduciendoViewController.h"
 #import "MarqueeLabel.h"
 #import "CancionesDAO.h"
-#import "Cancion.h"
+#import "Canciones.h"
 
 @interface ReproduciendoViewController ()
 
@@ -87,11 +87,11 @@
     
     NSMutableString *proximasCanciones = [[NSMutableString alloc] init];
     
-    [proximasCanciones appendFormat:@" %@", ((Cancion*)self.listaCanciones[0]).nombreCancion];
+    [proximasCanciones appendFormat:@" %@", ((Canciones*)self.listaCanciones[0]).nombreCancion];
     
     for (int i = 1; i < 3; i++) {
         
-        [proximasCanciones appendFormat:@" - %@", ((Cancion*)self.listaCanciones[i]).nombreCancion];
+        [proximasCanciones appendFormat:@" - %@", ((Canciones*)self.listaCanciones[i]).nombreCancion];
     }    
     
     return proximasCanciones;

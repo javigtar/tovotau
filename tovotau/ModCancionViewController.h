@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CancionesDAO.h"
-#import "Cancion.h"
+#import "Canciones.h"
 
 @interface ModCancionViewController : UIViewController{
    
@@ -23,7 +23,7 @@
  
     CancionesDAO *dao;
    
-    Cancion *cancion;
+    Canciones *cancion;
   
 }
 
@@ -35,7 +35,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *txtAlbum;
 @property (nonatomic, strong) IBOutlet UITextField *txtArtista;
 @property (nonatomic, strong) IBOutlet UIImageView *imagen;
-@property (nonatomic, strong) Cancion *cancion;
+@property (nonatomic, strong) Canciones *cancion;
 @property (nonatomic, strong) CancionesDAO *dao;
 
 - (IBAction) ocultarTeclado:(id)sender;

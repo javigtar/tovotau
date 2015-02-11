@@ -30,7 +30,7 @@
 		FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */; };
 		FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */; };
 		FBBEA1D71A7F945C009A9E37 /* ListaCancionesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */; };
-		FBBEA1D81A7F945C009A9E37 /* Cancion.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D21A7F945C009A9E37 /* Cancion.m */; };
+		FBBEA1D81A7F945C009A9E37 /* Canciones.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D21A7F945C009A9E37 /* Canciones.m */; };
 		FBBEA1DA1A7F95F3009A9E37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */; };
 		FBDDBCF61A88BBFA00513252 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */; };
 		FBDDBCFE1A88BC4B00513252 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */; };
@@ -75,7 +75,7 @@
 		FB7EB74F1A6664C6002E699D /* tovotauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tovotauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB7541A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7EB7551A6664C6002E699D /* tovotauTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tovotauTests.m; sourceTree = "<group>"; };
-		FBBEA1CA1A7F945C009A9E37 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cancion.h; sourceTree = "<group>"; };
+		FBBEA1CA1A7F945C009A9E37 /* Canciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canciones.h; sourceTree = "<group>"; };
 		FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancionesDAO.h; sourceTree = "<group>"; };
 		FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
 		FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancionesDAO.m; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		FBBEA1CF1A7F945C009A9E37 /* ModCancionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModCancionViewController.h; sourceTree = "<group>"; };
 		FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModCancionViewController.m; sourceTree = "<group>"; };
 		FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaCancionesTableViewController.m; sourceTree = "<group>"; };
-		FBBEA1D21A7F945C009A9E37 /* Cancion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cancion.m; sourceTree = "<group>"; };
+		FBBEA1D21A7F945C009A9E37 /* Canciones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Canciones.m; sourceTree = "<group>"; };
 		FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
@@ -161,8 +161,8 @@
 				FB4D21BB1A8214E600B3125F /* MarqueeLabel.m */,
 				FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */,
 				FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */,
-				FBBEA1CA1A7F945C009A9E37 /* Cancion.h */,
-				FBBEA1D21A7F945C009A9E37 /* Cancion.m */,
+				FBBEA1CA1A7F945C009A9E37 /* Canciones.h */,
+				FBBEA1D21A7F945C009A9E37 /* Canciones.m */,
 			);
 			name = Clases;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBBEA1D71A7F945C009A9E37 /* ListaCancionesTableViewController.m in Sources */,
-				FBBEA1D81A7F945C009A9E37 /* Cancion.m in Sources */,
+				FBBEA1D81A7F945C009A9E37 /* Canciones.m in Sources */,
 				FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */,
 				FB7EB7421A6664C6002E699D /* ViewController.m in Sources */,
 				FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */,

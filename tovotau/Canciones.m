@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 alumno. All rights reserved.
 //
 
-#import "Cancion.h"
+#import "Canciones.h"
 
-@implementation Cancion
+@implementation Canciones
 
 @synthesize cod_cancion;
 @synthesize nombreCancion;
