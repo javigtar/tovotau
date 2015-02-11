@@ -53,7 +53,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Canciones *cancion=[[Canciones alloc]init];
+    Cancion *cancion=[[Cancion alloc]init];
     static NSString *CellIdentifier = @"celda";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSLog(@"%ld",(long)indexPath.row);
@@ -68,7 +68,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ModCancionViewController *destino = [self.storyboard instantiateViewControllerWithIdentifier:@"visualizacion"];
-    Canciones *tmp = [canciones objectAtIndex:[indexPath row]];
+    Cancion *tmp = [canciones objectAtIndex:[indexPath row]];
     destino.cancion = tmp;
     
     

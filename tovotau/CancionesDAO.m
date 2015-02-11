@@ -7,7 +7,7 @@
 //
 
 #import "CancionesDAO.h"
-#import "Canciones.h"
+#import "Cancion.h"
 
 @implementation CancionesDAO
 
@@ -38,7 +38,7 @@
         
     }
     while(sqlite3_step(sqlStatement) == SQLITE_ROW){
-        Canciones *cancion = [[Canciones alloc] init];
+        Cancion *cancion = [[Cancion alloc] init];
         cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
