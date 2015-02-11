@@ -68,27 +68,36 @@
     UILabel *artista = (UILabel*)[self.view viewWithTag:2];
     artista.text = cancion.artista;
     
-    //Asigna a nombre el UILabel de la vista con la etiqueta 2
+    //Asigna a nombre el UILabel de la vista con la etiqueta 3
     UILabel *tituloCancion = (UILabel*)[self.view viewWithTag:3];
     tituloCancion.text = cancion.nombreCancion;
-     
+    
+    //Asigna a nombre el UILabel de la vista con la etiqueta 4
+    UILabel *album = (UILabel*)[self.view viewWithTag:4];
+    album.text = cancion.album;
+    
     return cell;
     
 
 }
 
-/*
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ModCancionViewController *destino = [self.storyboard instantiateViewControllerWithIdentifier:@"visualizacion"];
-    Cancion *tmp = [canciones objectAtIndex:[indexPath row]];
-    destino.cancion = tmp;
+    //Obtenemos la referencia a la celda
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    
-    [self.navigationController pushViewController:destino animated:YES];
+    //Comprobamos si la celda tiene el checkmark para ponerlo. Si lo tiene lo quitamos
+    if (cell.accessoryType == UITableViewCellAccessoryNone) {
+        
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
 }
- */
+
 
 /*
 // Override to support conditional editing of the table view.
