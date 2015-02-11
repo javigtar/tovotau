@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     
     //Instanciamos la clase engargada de obtener las canciones de la BD
-    //CancionesDAO *cancionesDAO = [[CancionesDAO alloc] init];
+    CancionesDAO *cancionesDAO = [[CancionesDAO alloc] init];
     
     //Añadimos las canciones de la BD a una MutableArray
     self.listaCanciones = [cancionesDAO obtenerCanciones];
