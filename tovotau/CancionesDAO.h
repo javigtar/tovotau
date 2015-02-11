@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import "Cancion.h"
 
 @interface CancionesDAO : NSObject{
     sqlite3* bd;
@@ -16,5 +17,7 @@
 - (NSMutableArray *) obtenerCanciones;
 - (NSString *) obtenerRuta;
 
+-(NSUInteger) numeroDeCanciones;
+-(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion;
 
 @end

@@ -10,12 +10,6 @@
 #import "CancionesDAO.h"
 #import "ModCancionViewController.h"
 
-@interface ListaCancionesTableViewController : UITableViewController{
-    CancionesDAO* dao;
-    NSMutableArray* canciones;
-}
-@property (nonatomic, strong) NSMutableArray *canciones;
-@property (nonatomic, strong) CancionesDAO* dao;
-
+@interface ListaCancionesTableViewController : UITableViewController
 
 @end

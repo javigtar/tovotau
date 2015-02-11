@@ -10,21 +10,16 @@
 
 @interface ListaCancionesTableViewController ()
 
+@property (nonatomic,strong) CancionesDAO *listaCanciones;
+
 @end
 
 @implementation ListaCancionesTableViewController
-@synthesize dao;
-@synthesize canciones;
-
 
 - (void)viewDidLoad {
-    dao = [[CancionesDAO alloc] init];
-    canciones = [[NSMutableArray alloc] init];
-    canciones = [dao obtenerCanciones];
- 
-
     [super viewDidLoad];
     
+    self.listaCanciones = [[CancionesDAO alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -48,23 +43,31 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [canciones count];
+    return [self.listaCanciones numeroDeCanciones];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    /*
     Cancion *cancion=[[Cancion alloc]init];
     static NSString *CellIdentifier = @"celda";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSLog(@"%ld",(long)indexPath.row);
     cancion =[canciones objectAtIndex:indexPath.row];
     cell.textLabel.text =cancion.nombreCancion;
-
+     */
+    
+    Cancion *cancion = [self.listaCanciones cancionSegunIndice:indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cancion" forIndexPath:indexPath];
+     
     return cell;
     
 
 }
 
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ModCancionViewController *destino = [self.storyboard instantiateViewControllerWithIdentifier:@"visualizacion"];
@@ -75,6 +78,7 @@
     [self.navigationController pushViewController:destino animated:YES];
     
 }
+ */
 
 /*
 // Override to support conditional editing of the table view.

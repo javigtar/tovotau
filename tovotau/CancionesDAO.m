@@ -9,7 +9,23 @@
 #import "CancionesDAO.h"
 #import "Cancion.h"
 
+@interface CancionesDAO()
+
+@property (nonatomic,strong) NSMutableArray *listaCanciones;
+
+@end
+
 @implementation CancionesDAO
+
+
+
+-(id)init{
+    
+    self = [super init];
+    self.listaCanciones = [self obtenerCanciones];
+    return self;
+    
+}
 
 - (NSString *) obtenerRuta{
     NSString *dirDocs;
@@ -48,6 +64,18 @@
         
     }
     return listaCanciones;
+}
+
+//Numero de canciones de la base de datos
+-(NSUInteger)numeroDeCanciones{
+    
+    return [self.listaCanciones count];
+}
+
+//Devuelve la cancion del indice del Array pasado como parámetro
+-(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion{
+    
+    return [self.listaCanciones objectAtIndex:indiceDeCancion];
 }
 
 
