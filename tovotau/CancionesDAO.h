@@ -15,6 +15,8 @@
     
 }
 - (NSMutableArray *) obtenerCanciones;
+- (NSMutableArray *) obtenerTop5;
+
 - (NSString *) obtenerRuta;
 
 -(NSUInteger) numeroDeCanciones;
