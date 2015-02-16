@@ -41,6 +41,35 @@
     return rutaBD;
 }
 
+
+-(NSMutableArray *)obtenerTop5{
+    //Esta funcion obtiene las 5 primeras canciones mas votadas
+    NSMutableArray *top5 = [[NSMutableArray alloc] init];
+    NSString *ubicacionDB = [self obtenerRuta];
+    if(!(sqlite3_open([ubicacionDB UTF8String], &bd) == SQLITE_OK)){
+        NSLog(@"No se puede conectar con la BD");
+    }
+    const char *sentenciaSQL = "SELECT c.id,c.nombre ,c.artista , c.album ,c.imagen FROM canciones c,lista l GROUP BY l.votos order by asc LIMIT(5);";
+    sqlite3_stmt *sqlStatement;
+    if(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
+        NSLog(@"Problema al preparar el statement");
+        
+    }
+    while(sqlite3_step(sqlStatement) == SQLITE_ROW){
+        Cancion *cancion = [[Cancion alloc] init];
+        cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
+        cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
+        cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+        //cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
+        
+        [top5 addObject:cancion];
+        
+    }
+    return top5;
+
+}
+
+
 - (NSMutableArray *) obtenerCanciones{
     NSMutableArray *listaCanciones = [[NSMutableArray alloc] init];
     NSString *ubicacionDB = [self obtenerRuta];

@@ -134,4 +134,14 @@
     
 }
 
+
+/*
+-(void)mostrarTop5Canciones (){
+    NSMutableArray *top5Canciones = [[NSMutableArray alloc ]init];
+    CancionesDAO *miscancionesdao = [[CancionesDAO alloc]init ];
+    top5Canciones = [miscancionesdao obtenerTop5];
+    
+
+}
+*/
 @end
