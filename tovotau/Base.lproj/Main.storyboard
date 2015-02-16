@@ -444,10 +444,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="VBI-Ja-inx">
-                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1O2-0J-Wbu">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="WRT-9H-e8h" id="MI6-dM-IHJ"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cancion" rowHeight="152" id="Bez-d8-T5B">
@@ -485,16 +488,13 @@
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="114" y="31" width="177" height="21"/>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="107" y="65" width="177" height="21"/>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWC-Ln-6KA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWC-Ln-6KA">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="POv-5t-YML"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -538,9 +538,6 @@
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="114" y="31" width="177" height="21"/>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="107" y="94" width="177" height="21"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -577,21 +574,21 @@
                                             <exclude reference="QgV-xf-uyo"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="Mh0-mD-Zxn"/>
+                                            <exclude reference="XqW-ex-tci"/>
+                                            <exclude reference="W60-5t-D5s"/>
+                                            <exclude reference="WcQ-0B-cCF"/>
+                                            <exclude reference="Y2V-Pe-Nqw"/>
+                                            <exclude reference="gIx-Sa-aMw"/>
+                                            <exclude reference="lIo-LZ-eqg"/>
+                                            <exclude reference="opm-g2-lca"/>
+                                            <exclude reference="tFk-X3-XgQ"/>
+                                            <exclude reference="vCn-bU-g8N"/>
                                             <exclude reference="6TQ-NF-7fx"/>
                                             <exclude reference="L4V-HF-UU5"/>
                                             <exclude reference="97Q-uI-KAZ"/>
                                             <exclude reference="iyA-db-aue"/>
                                             <exclude reference="ocs-RQ-RRS"/>
-                                            <exclude reference="Mh0-mD-Zxn"/>
-                                            <exclude reference="XqW-ex-tci"/>
-                                            <exclude reference="lIo-LZ-eqg"/>
-                                            <exclude reference="opm-g2-lca"/>
-                                            <exclude reference="tFk-X3-XgQ"/>
-                                            <exclude reference="vCn-bU-g8N"/>
-                                            <exclude reference="W60-5t-D5s"/>
-                                            <exclude reference="WcQ-0B-cCF"/>
-                                            <exclude reference="Y2V-Pe-Nqw"/>
-                                            <exclude reference="gIx-Sa-aMw"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -602,10 +599,10 @@
                                             <include reference="gQD-gH-aGk"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="97Q-uI-KAZ"/>
-                                            <include reference="ocs-RQ-RRS"/>
                                             <include reference="Mh0-mD-Zxn"/>
                                             <include reference="XqW-ex-tci"/>
+                                            <include reference="97Q-uI-KAZ"/>
+                                            <include reference="ocs-RQ-RRS"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -613,17 +610,17 @@
                                             <include reference="QgV-xf-uyo"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="6TQ-NF-7fx"/>
-                                            <include reference="L4V-HF-UU5"/>
-                                            <include reference="iyA-db-aue"/>
-                                            <include reference="lIo-LZ-eqg"/>
-                                            <include reference="opm-g2-lca"/>
-                                            <include reference="tFk-X3-XgQ"/>
-                                            <include reference="vCn-bU-g8N"/>
                                             <include reference="W60-5t-D5s"/>
                                             <include reference="WcQ-0B-cCF"/>
                                             <include reference="Y2V-Pe-Nqw"/>
                                             <include reference="gIx-Sa-aMw"/>
+                                            <include reference="lIo-LZ-eqg"/>
+                                            <include reference="opm-g2-lca"/>
+                                            <include reference="tFk-X3-XgQ"/>
+                                            <include reference="vCn-bU-g8N"/>
+                                            <include reference="6TQ-NF-7fx"/>
+                                            <include reference="L4V-HF-UU5"/>
+                                            <include reference="iyA-db-aue"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -636,10 +633,26 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="J5u-LH-5Pg">
-                        <barButtonItem key="rightBarButtonItem" title="OK" id="DXx-7e-3f0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Votar" id="DXx-7e-3f0">
+                            <connections>
+                                <action selector="validarVotos:" destination="WRT-9H-e8h" id="J6v-9B-U5x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="gcy-Za-d37" id="y17-bQ-pmc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1A-pw-un7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="gcy-Za-d37">
+                    <connections>
+                        <outlet property="delegate" destination="WRT-9H-e8h" id="DxF-LL-NRJ"/>
+                        <outlet property="searchBar" destination="1O2-0J-Wbu" id="UIy-es-QOF"/>
+                        <outlet property="searchContentsController" destination="WRT-9H-e8h" id="FSY-Dt-ck6"/>
+                        <outlet property="searchResultsDataSource" destination="WRT-9H-e8h" id="13L-IV-hZV"/>
+                        <outlet property="searchResultsDelegate" destination="WRT-9H-e8h" id="eck-1E-rb9"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2175" y="1195"/>
         </scene>

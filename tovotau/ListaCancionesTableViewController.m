@@ -11,6 +11,7 @@
 @interface ListaCancionesTableViewController ()
 
 @property (nonatomic,strong) CancionesDAO *listaCanciones;
+- (IBAction)validarVotos:(id)sender;
 
 @end
 
@@ -98,6 +99,10 @@
     
 }
 
+- (IBAction)validarVotos:(id)sender{
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -17,5 +17,6 @@
 @property (nonatomic) NSString *artista;
 @property (nonatomic) NSString *album;
 @property (nonatomic) NSString *imagen;
+@property (nonatomic) NSString *votos;
 
 @end
