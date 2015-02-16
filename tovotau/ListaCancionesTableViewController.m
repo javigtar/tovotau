@@ -8,12 +8,18 @@
 
 #import "ListaCancionesTableViewController.h"
 
-@interface ListaCancionesTableViewController ()
+@interface ListaCancionesTableViewController (){
+    
+    BOOL modoBusqueda; //Variable que controla si se esta buscando canciones o las muestra todas
+    
+}
 
 @property (nonatomic,strong) CancionesDAO *listaCanciones;
 
 @property (nonatomic,strong) NSArray *canciones;
 @property (nonatomic,strong) NSArray *cancionesFiltradas;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 - (IBAction)validarVotos:(id)sender;
 
@@ -24,10 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    modoBusqueda = false;
+    
     self.listaCanciones = [[CancionesDAO alloc] init];
     
+    //Guardamos las canciones en un array
     self.canciones = [self.listaCanciones obtenerCanciones];
     
+    //Ponemos como delegado del search bar a esta clase
+    self.searchBar.delegate = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,42 +61,51 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    // Return the number of rows in the section.
-    return [self.canciones count];
+    //Comprobamos si está eno modo busqueda para que muestre tantas filas como el total de canciones
+    //o como canciones filtradas haya
+    if(modoBusqueda){
+        
+        return self.cancionesFiltradas.count;
+        
+    }
+    
+    return self.canciones.count;
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    /*
-    Cancion *cancion=[[Cancion alloc]init];
-    static NSString *CellIdentifier = @"celda";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    NSLog(@"%ld",(long)indexPath.row);
-    cancion =[canciones objectAtIndex:indexPath.row];
-    cell.textLabel.text =cancion.nombreCancion;
-     */
-    
-    //Obtenemos la canción según el índice de la tabla
-    Cancion *cancion = [self.canciones objectAtIndex:indexPath.row];
-    
-    //Obtenemos la referencia a la celda
+    //Obtenemos la referencia a la celda con ese identificador
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cancion" forIndexPath:indexPath];
     
-    //Asigna a nombre el UILabel de la vista con la etiqueta 2
+    //Creamos un objeto cancion
+    Cancion *cancion;
+    
+    //Obtenemos la referencia al label con la etiqueta 2 que corresponde al artista
     UILabel *artista = (UILabel*)[self.view viewWithTag:2];
-    artista.text = cancion.artista;
-    
-    //Asigna a nombre el UILabel de la vista con la etiqueta 3
-    UILabel *tituloCancion = (UILabel*)[self.view viewWithTag:3];
-    tituloCancion.text = cancion.nombreCancion;
-    
-    //Asigna a nombre el UILabel de la vista con la etiqueta 4
+    //Obtenemos la referencia al label con la etiqueta 3 que corresponde al nombre de la canción
+    UILabel *nombreCancion = (UILabel*)[self.view viewWithTag:3];
+    //Obtenemos la referencia al label con la etiqueta 4 que corresponde al álbum
     UILabel *album = (UILabel*)[self.view viewWithTag:4];
+    
+    //Comprobamos si está o no en modo búsqueda para obtener la cancion del array de todas las canciones
+    //o del array de las canciones filtradas
+    if (modoBusqueda) {
+        
+        cancion = [self.cancionesFiltradas objectAtIndex:indexPath.row];
+        
+    } else {
+        
+        cancion = [self.canciones objectAtIndex:indexPath.row];
+    }
+    
+    //Rellenamos los datos de la canción
+    artista.text = cancion.artista;
+    nombreCancion.text = cancion.nombreCancion;
     album.text = cancion.album;
     
     return cell;
-    
 
 }
 
@@ -99,27 +119,43 @@
     if (cell.accessoryType == UITableViewCellAccessoryNone) {
         
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
     }else{
         
         cell.accessoryType = UITableViewCellAccessoryNone;
+        
     }
     
 }
 
-
-- (void)filtrarCancionesSegunBusqueda:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(nombreCancion LIKE[cd] %@) OR (artista LIKE[cd] %@) OR (album LIKE[cd] %@)",
-                                    searchText, searchText, searchText];
-    self.cancionesFiltradas = [self.canciones filteredArrayUsingPredicate:resultPredicate];
+//Método que se ejecutará cada vez que cambie el texto de la barra de busqueda
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+    //Comprobamos si se ha escrito algo en la barra de busqueda
+    if (searchBar.text.length > 0) {
+        
+        //Creamos el predicado que utilizaremos para filtrar las canciones
+        NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"nombreCancion CONTAINS[c] %@ OR artista CONTAINS[C] %@ OR album CONTAINS[c] %@", searchBar.text, searchBar.text, searchBar.text];
+        
+        //Filtramos las canciones según el predicado
+        self.cancionesFiltradas = [self.canciones filteredArrayUsingPredicate:resultPredicate];
+        
+        //Ponemos a true el modo busqueda para que muestre la lista de las canciones filtradas
+        modoBusqueda = true;
+        
+    }else{
+        
+        //Si en la barra de busqueda no hay nada escrito ponemos a false el modo de busqueda para que muestre todas las canciones
+        modoBusqueda = false;
+    }
+    
+    //Recargamos los datos de la tabla
+    [self.tableView reloadData];
+    
 }
 
 
-- (IBAction)validarVotos:(id)sender{
-    
-    
-}
-
+/*
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     //[self filterContentForSearchText:searchString scope:[[self. scopeButtonTitles]
@@ -127,6 +163,7 @@
     
     return YES;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.

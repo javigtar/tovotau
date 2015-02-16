@@ -10,6 +10,6 @@
 #import "CancionesDAO.h"
 #import "ModCancionViewController.h"
 
-@interface ListaCancionesTableViewController : UITableViewController
+@interface ListaCancionesTableViewController : UITableViewController <UISearchBarDelegate>
 
 @end
