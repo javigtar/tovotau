@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59DFABB71A927B4E009759C2 /* votar.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB51A927B4E009759C2 /* votar.png */; };
+		59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB61A927B4E009759C2 /* quitarVoto.png */; };
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59DFABB51A927B4E009759C2 /* votar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votar.png; sourceTree = "<group>"; };
+		59DFABB61A927B4E009759C2 /* quitarVoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitarVoto.png; sourceTree = "<group>"; };
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
 		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59DFABB41A927B32009759C2 /* botones */ = {
+			isa = PBXGroup;
+			children = (
+				59DFABB51A927B4E009759C2 /* votar.png */,
+				59DFABB61A927B4E009759C2 /* quitarVoto.png */,
+			);
+			name = botones;
+			sourceTree = "<group>";
+		};
 		FB29CD491A88C894004CCF14 /* banners */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +198,7 @@
 		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				59DFABB41A927B32009759C2 /* botones */,
 				FB29CD491A88C894004CCF14 /* banners */,
 				FB6298371A6D1DC800582767 /* leonardoDantes.jpg */,
 			);
@@ -335,10 +349,12 @@
 			files = (
 				FB6298381A6D1DC800582767 /* leonardoDantes.jpg in Resources */,
 				FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */,
+				59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */,
 				FB7EB7451A6664C6002E699D /* Main.storyboard in Resources */,
 				FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */,
 				FB446BFB1A8B3E6600068D7C /* definitiva.sqlite in Resources */,
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
+				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
 				FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
 				FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */,

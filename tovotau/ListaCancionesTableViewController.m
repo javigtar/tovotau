@@ -21,7 +21,8 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-- (IBAction)validarVotos:(id)sender;
+- (IBAction)votarCancion:(UIButton *)sender;
+- (IBAction)quitarVotoCancion:(UIButton *)sender;
 
 @end
 
@@ -109,25 +110,6 @@
 
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //Obtenemos la referencia a la celda
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    //Comprobamos si la celda tiene el checkmark para ponerlo. Si lo tiene lo quitamos
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
-    }else{
-        
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        
-    }
-    
-}
-
 //Método que se ejecutará cada vez que cambie el texto de la barra de busqueda
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
@@ -152,6 +134,33 @@
     //Recargamos los datos de la tabla
     [self.tableView reloadData];
     
+}
+
+- (IBAction)votarCancion:(UIButton *)sender {
+    
+    //Obtenemos la referencia al imageview del botón
+    UIImageView *imagenBoton = sender.imageView;
+    
+    //Animamos la imagen al pulsar el botón
+    [UIView animateWithDuration: 0.1 delay: 0.0 options: UIViewAnimationOptionAutoreverse animations:^{
+        imagenBoton.transform = CGAffineTransformMakeScale(2, 2);
+    }completion:^(BOOL finished){
+        imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+}
+
+- (IBAction)quitarVotoCancion:(UIButton *)sender {
+    
+    //Obtenemos la referencia al imageview del botón
+    UIImageView *imagenBoton = sender.imageView;
+    
+    //Animamos la imagen al pulsar el botón
+    [UIView animateWithDuration: 0.1 delay: 0.0 options: UIViewAnimationOptionAutoreverse animations:^{
+        imagenBoton.transform = CGAffineTransformMakeScale(2, 2);
+    }completion:^(BOOL finished){
+        imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+
 }
 
 
@@ -208,5 +217,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
