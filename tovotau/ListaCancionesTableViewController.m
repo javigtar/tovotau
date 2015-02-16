@@ -11,6 +11,10 @@
 @interface ListaCancionesTableViewController ()
 
 @property (nonatomic,strong) CancionesDAO *listaCanciones;
+
+@property (nonatomic,strong) NSArray *canciones;
+@property (nonatomic,strong) NSArray *cancionesFiltradas;
+
 - (IBAction)validarVotos:(id)sender;
 
 @end
@@ -21,6 +25,9 @@
     [super viewDidLoad];
     
     self.listaCanciones = [[CancionesDAO alloc] init];
+    
+    self.canciones = [self.listaCanciones obtenerCanciones];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,7 +51,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [self.listaCanciones numeroDeCanciones];
+    return [self.canciones count];
 }
 
 
@@ -60,7 +67,7 @@
      */
     
     //Obtenemos la canción según el índice de la tabla
-    Cancion *cancion = [self.listaCanciones cancionSegunIndice:indexPath.row];
+    Cancion *cancion = [self.canciones objectAtIndex:indexPath.row];
     
     //Obtenemos la referencia a la celda
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cancion" forIndexPath:indexPath];
@@ -99,9 +106,26 @@
     
 }
 
+
+- (void)filtrarCancionesSegunBusqueda:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(nombreCancion LIKE[cd] %@) OR (artista LIKE[cd] %@) OR (album LIKE[cd] %@)",
+                                    searchText, searchText, searchText];
+    self.cancionesFiltradas = [self.canciones filteredArrayUsingPredicate:resultPredicate];
+}
+
+
 - (IBAction)validarVotos:(id)sender{
     
     
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    //[self filterContentForSearchText:searchString scope:[[self. scopeButtonTitles]
+                                                         //objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
 }
 
 /*
