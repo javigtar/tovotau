@@ -178,19 +178,19 @@
                                 <exclude reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="iZN-fJ-gS8"/>
+                                <exclude reference="4GU-de-qB4"/>
+                                <exclude reference="G5O-L0-crj"/>
+                                <exclude reference="zbJ-mi-Cwr"/>
+                                <exclude reference="FNG-MK-DWZ"/>
+                                <exclude reference="czV-Sg-1r3"/>
                                 <exclude reference="GCR-p8-G4a"/>
                                 <exclude reference="PV6-hn-ah7"/>
                                 <exclude reference="mya-u2-RwG"/>
                                 <exclude reference="vDt-UX-Gb8"/>
-                                <exclude reference="iZN-fJ-gS8"/>
                                 <exclude reference="Imc-vP-zOf"/>
                                 <exclude reference="ZLJ-av-1rn"/>
                                 <exclude reference="vjf-Jd-AbU"/>
-                                <exclude reference="FNG-MK-DWZ"/>
-                                <exclude reference="czV-Sg-1r3"/>
-                                <exclude reference="4GU-de-qB4"/>
-                                <exclude reference="G5O-L0-crj"/>
-                                <exclude reference="zbJ-mi-Cwr"/>
                                 <exclude reference="JK4-mr-U35"/>
                                 <exclude reference="UbJ-tr-t66"/>
                                 <exclude reference="d2S-s1-Tvf"/>
@@ -206,18 +206,18 @@
                                 <include reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GCR-p8-G4a"/>
-                                <include reference="PV6-hn-ah7"/>
-                                <include reference="vDt-UX-Gb8"/>
                                 <include reference="iZN-fJ-gS8"/>
-                                <include reference="Imc-vP-zOf"/>
-                                <include reference="ZLJ-av-1rn"/>
-                                <include reference="vjf-Jd-AbU"/>
-                                <include reference="FNG-MK-DWZ"/>
-                                <include reference="czV-Sg-1r3"/>
                                 <include reference="4GU-de-qB4"/>
                                 <include reference="G5O-L0-crj"/>
                                 <include reference="zbJ-mi-Cwr"/>
+                                <include reference="FNG-MK-DWZ"/>
+                                <include reference="czV-Sg-1r3"/>
+                                <include reference="GCR-p8-G4a"/>
+                                <include reference="PV6-hn-ah7"/>
+                                <include reference="vDt-UX-Gb8"/>
+                                <include reference="Imc-vP-zOf"/>
+                                <include reference="ZLJ-av-1rn"/>
+                                <include reference="vjf-Jd-AbU"/>
                                 <include reference="UbJ-tr-t66"/>
                             </mask>
                         </variation>
@@ -233,6 +233,7 @@
                     <connections>
                         <outlet property="banner" destination="yKj-DZ-VHp" id="lZ9-wO-RIn"/>
                         <outlet property="labelCancionPrincipal" destination="LDd-Wv-EPb" id="bUy-Yi-E30"/>
+                        <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="e6d-PM-hT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
