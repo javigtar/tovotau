@@ -49,7 +49,7 @@
     if(!(sqlite3_open([ubicacionDB UTF8String], &bd) == SQLITE_OK)){
         NSLog(@"No se puede conectar con la BD");
     }
-    const char *sentenciaSQL = "SELECT * FROM canciones ;";
+    const char *sentenciaSQL = "SELECT * FROM canciones order by votos;";
     sqlite3_stmt *sqlStatement;
     if(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         NSLog(@"Problema al preparar el statement");

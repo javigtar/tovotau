@@ -10,7 +10,6 @@
 
 @implementation Cancion
 
-@synthesize cod_cancion;
 @synthesize nombreCancion;
 @synthesize artista;
 @synthesize album;
