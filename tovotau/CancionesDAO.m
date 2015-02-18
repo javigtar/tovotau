@@ -99,15 +99,54 @@
     return listaCanciones;
 }
 
-//Añadir voto a la canción
+//Suma un voto a la canción
 -(void)sumarVotoACancion:(NSString*) id_cancion{
     
+    //Obtenemos la ruta a la base de datos
     NSString *ubicacionDB = [self obtenerRuta];
+    
+    //Comprobamos si se puede conectar
     if(!(sqlite3_open([ubicacionDB UTF8String], &bd) == SQLITE_OK)){
         NSLog(@"No se puede conectar con la BD");
     }
+    
+    //Creamos la sentencia sql
     const char *sentenciaSQL = "INSERT INTO canciones VALUES votos = votos + 1 WHERE id_cancion = ?";
+    
+    //Creamos un statement
     sqlite3_stmt *sqlStatement;
+    
+    //Preparamos el statement
+    if(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
+        NSLog(@"Problema al preparar el statement");
+        
+    }
+    
+    //Añadimos al statement el parametro por el que modificará la canción
+    sqlite3_bind_int(sqlStatement, 1, [id_cancion intValue]);
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+}
+
+//Quitamos un voto a la canción
+-(void)restarVotoACancion:(NSString*) id_cancion{
+    
+    //Obtenemos la ruta a la base de datos
+    NSString *ubicacionDB = [self obtenerRuta];
+    
+    //Comprobamos si se puede conectar
+    if(!(sqlite3_open([ubicacionDB UTF8String], &bd) == SQLITE_OK)){
+        NSLog(@"No se puede conectar con la BD");
+    }
+    
+    //Creamos la sentencia sql
+    const char *sentenciaSQL = "INSERT INTO canciones VALUES votos = votos + 1 WHERE id_cancion = ?";
+    
+    //Creamos un statement
+    sqlite3_stmt *sqlStatement;
+    
+    //Preparamos el statement
     if(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         NSLog(@"Problema al preparar el statement");
         

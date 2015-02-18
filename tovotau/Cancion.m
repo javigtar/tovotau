@@ -8,6 +8,11 @@
 
 #import "Cancion.h"
 
+@interface Cancion ()
+
+@end
+
+
 @implementation Cancion
 
 @synthesize nombreCancion;

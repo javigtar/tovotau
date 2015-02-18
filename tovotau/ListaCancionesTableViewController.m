@@ -83,6 +83,9 @@
     UILabel *nombreCancion = (UILabel*)[self.view viewWithTag:3];
     //Obtenemos la referencia al label con la etiqueta 4 que corresponde al álbum
     UILabel *album = (UILabel*)[self.view viewWithTag:4];
+    //Obtenemos la referencia al label con la etiqueta 5 que corresponde al id de la cancion
+    //No se visualiza nada, solo es para utilizarlo a la hora de votar
+    UILabel *id_cancion = (UILabel*)[self.view viewWithTag:5];
     
     //Comprobamos si el array de canciones filtradas no es nulo para obtener la cancion del array de todas las canciones
     //o del array de las canciones filtradas
@@ -99,6 +102,7 @@
     artista.text = cancion.artista;
     nombreCancion.text = cancion.nombreCancion;
     album.text = cancion.album;
+    id_cancion.text = cancion.id_cancion;
     
     return cell;
 
@@ -139,6 +143,12 @@
     }completion:^(BOOL finished){
         imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
     }];
+    
+    //Obtemos la referencia al label del id de la cancion
+    UILabel *id_cancion = (UILabel*)[sender.superview viewWithTag:5];
+    
+    //Sumamos un voto a la cancion con ese id
+    [self.listaCanciones sumarVotoACancion:id_cancion.text];
 }
 
 - (IBAction)quitarVotoCancion:(UIButton *)sender {
