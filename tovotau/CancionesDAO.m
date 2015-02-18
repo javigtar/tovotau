@@ -113,7 +113,7 @@
         
     }
     
-    //Añadimos al statement el parametro por el que modificará la cancion
+    //Añadimos al statement el parametro por el que modificará la canción
     sqlite3_bind_int(sqlStatement, 1, [id_cancion intValue]);
     
     //Finalizamos el statement
