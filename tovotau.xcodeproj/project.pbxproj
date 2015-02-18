@@ -13,7 +13,6 @@
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
 		FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD4A1A88C93D004CCF14 /* 3.jpg */; };
-		FB446BFB1A8B3E6600068D7C /* definitiva.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */; };
 		FB4D21B11A82118E00B3125F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B01A82118E00B3125F /* CoreText.framework */; };
 		FB4D21B31A8211A100B3125F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B21A8211A100B3125F /* QuartzCore.framework */; };
 		FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D21B41A8211AA00B3125F /* UIKit.framework */; };
@@ -28,6 +27,11 @@
 		FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7EB7461A6664C6002E699D /* Images.xcassets */; };
 		FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7EB7481A6664C6002E699D /* LaunchScreen.xib */; };
 		FB7EB7561A6664C6002E699D /* tovotauTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7EB7551A6664C6002E699D /* tovotauTests.m */; };
+		FBB2A7141A947A3D00AB6CD6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB2A7131A947A3D00AB6CD6 /* TabBarController.m */; };
+		FBB2A71B1A947C2700AB6CD6 /* icono.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A7171A947C2700AB6CD6 /* icono.png */; };
+		FBB2A71C1A947C2700AB6CD6 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A7181A947C2700AB6CD6 /* list.png */; };
+		FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A7191A947C2700AB6CD6 /* perfil.png */; };
+		FBB2A71E1A947C2700AB6CD6 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A71A1A947C2700AB6CD6 /* qr.png */; };
 		FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */; };
 		FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */; };
 		FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */; };
@@ -57,7 +61,6 @@
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		FB29CD471A88B9C0004CCF14 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		FB29CD4A1A88C93D004CCF14 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		FB4D21B01A82118E00B3125F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		FB4D21B21A8211A100B3125F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB4D21B41A8211AA00B3125F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -79,6 +82,13 @@
 		FB7EB74F1A6664C6002E699D /* tovotauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tovotauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB7541A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7EB7551A6664C6002E699D /* tovotauTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tovotauTests.m; sourceTree = "<group>"; };
+		FBB2A7091A94781B00AB6CD6 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
+		FBB2A7121A947A3D00AB6CD6 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		FBB2A7131A947A3D00AB6CD6 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		FBB2A7171A947C2700AB6CD6 /* icono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono.png; sourceTree = "<group>"; };
+		FBB2A7181A947C2700AB6CD6 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		FBB2A7191A947C2700AB6CD6 /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
+		FBB2A71A1A947C2700AB6CD6 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
 		FBBEA1CA1A7F945C009A9E37 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cancion.h; sourceTree = "<group>"; };
 		FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancionesDAO.h; sourceTree = "<group>"; };
 		FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
@@ -144,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
-				FB446BFA1A8B3E6600068D7C /* definitiva.sqlite */,
+				FBB2A7091A94781B00AB6CD6 /* definitiva.sqlite */,
 				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
 			);
 			name = SQLite;
@@ -163,6 +173,8 @@
 				FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */,
 				FBDDBCFF1A88BD7600513252 /* EscanerQRViewController.h */,
 				FBDDBD001A88BD7600513252 /* EscanerQRViewController.m */,
+				FBB2A7121A947A3D00AB6CD6 /* TabBarController.h */,
+				FBB2A7131A947A3D00AB6CD6 /* TabBarController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +210,10 @@
 		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				FBB2A7171A947C2700AB6CD6 /* icono.png */,
+				FBB2A7181A947C2700AB6CD6 /* list.png */,
+				FBB2A7191A947C2700AB6CD6 /* perfil.png */,
+				FBB2A71A1A947C2700AB6CD6 /* qr.png */,
 				59DFABB41A927B32009759C2 /* botones */,
 				FB29CD491A88C894004CCF14 /* banners */,
 				FB6298371A6D1DC800582767 /* leonardoDantes.jpg */,
@@ -348,16 +364,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6298381A6D1DC800582767 /* leonardoDantes.jpg in Resources */,
+				FBB2A71B1A947C2700AB6CD6 /* icono.png in Resources */,
 				FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */,
 				59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */,
 				FB7EB7451A6664C6002E699D /* Main.storyboard in Resources */,
 				FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */,
-				FB446BFB1A8B3E6600068D7C /* definitiva.sqlite in Resources */,
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
+				FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */,
 				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
 				FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
 				FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */,
+				FBB2A71E1A947C2700AB6CD6 /* qr.png in Resources */,
+				FBB2A71C1A947C2700AB6CD6 /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +399,7 @@
 				FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */,
 				FB7EB7421A6664C6002E699D /* ViewController.m in Sources */,
 				FB7EB73F1A6664C6002E699D /* AppDelegate.m in Sources */,
+				FBB2A7141A947A3D00AB6CD6 /* TabBarController.m in Sources */,
 				FB4D21BC1A8214E600B3125F /* MarqueeLabel.m in Sources */,
 				FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */,
 				FBDDBD011A88BD7600513252 /* EscanerQRViewController.m in Sources */,

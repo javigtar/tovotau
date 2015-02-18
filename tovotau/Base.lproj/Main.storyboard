@@ -233,6 +233,7 @@
                     <connections>
                         <outlet property="banner" destination="yKj-DZ-VHp" id="lZ9-wO-RIn"/>
                         <outlet property="labelCancionPrincipal" destination="LDd-Wv-EPb" id="bUy-Yi-E30"/>
+                        <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="e6d-PM-hT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -751,7 +752,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KbT-Jq-8DY">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pYv-Fi-E42" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pYv-Fi-E42" customClass="TabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="pth-q1-gLq">
