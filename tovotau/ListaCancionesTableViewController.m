@@ -86,6 +86,8 @@
     //Obtenemos la referencia al label con la etiqueta 5 que corresponde al id de la cancion
     //No se visualiza nada, solo es para utilizarlo a la hora de votar
     UILabel *id_cancion = (UILabel*)[self.view viewWithTag:5];
+    //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
+    UILabel *votos = (UILabel*)[self.view viewWithTag:6];
     
     //Comprobamos si el array de canciones filtradas no es nulo para obtener la cancion del array de todas las canciones
     //o del array de las canciones filtradas
@@ -103,6 +105,7 @@
     nombreCancion.text = cancion.nombreCancion;
     album.text = cancion.album;
     id_cancion.text = cancion.id_cancion;
+    votos.text = [cancion.votos stringValue];
     
     return cell;
 
