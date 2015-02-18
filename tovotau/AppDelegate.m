@@ -16,7 +16,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UITabBarController* barController = (UITabBarController*)self.window.rootViewController;
+    UITabBarItem *itemUno = barController.tabBar.items[0];
+    [itemUno setTitle:@"Reproduciendo"];
+    [itemUno setImage:[UIImage imageNamed:@"reproducir.jpg"]];//setImage MODIFICA LA IMAGEN DEL ITEM
+    [itemUno setSelectedImage:[UIImage imageNamed:@"champagne.png"]];//CAMBIA LA IMAGEN CUANDO EL ITEM ES SELECCIONADO
+    UITabBarItem *itemDos = barController.tabBar.items[1];
+    [itemDos setTitle:@"Lista"];
+    [itemDos setImage:[UIImage imageNamed:@"list.png"]];
+    UITabBarItem *itemTres = barController.tabBar.items[2];
+    [itemTres setTitle:@"Perfil"];
+    [itemTres setImage:[UIImage imageNamed:@"perfil.png"]];
+    UITabBarItem *itemCuatro = barController.tabBar.items[3];
+    [itemCuatro setTitle:@"Vota ya"];
+    [itemCuatro setImage:[UIImage imageNamed:@"qr.png"]];
+    
+    [[UITabBar appearance] setTintColor:[UIColor redColor]]; //ESTO CAMBIARÍA EL COLOR DEL ITEM SELECCIONADO
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"backgroundImg.jpg"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"superpuesta.png"]];
     return YES;
 }
 
