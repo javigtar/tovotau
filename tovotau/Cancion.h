@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cancion : NSObject{
-   
-}
+@interface Cancion : NSObject
 
 @property (nonatomic) NSString *id_cancion;
 @property (nonatomic) NSString *nombreCancion;
