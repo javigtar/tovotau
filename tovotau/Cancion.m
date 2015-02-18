@@ -15,9 +15,5 @@
 
 @implementation Cancion
 
-@synthesize nombreCancion;
-@synthesize artista;
-@synthesize album;
-@synthesize imagen;
 
 @end

@@ -90,6 +90,7 @@
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
         //cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
+        NSLog(@"%@", [[NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)] stringValue]);
         cancion.votos = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)];
         cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
         
@@ -111,7 +112,7 @@
     }
     
     //Creamos la sentencia sql
-    const char *sentenciaSQL = "INSERT INTO canciones VALUES votos = votos + 1 WHERE id_cancion = ?";
+    const char *sentenciaSQL = "UPDATE canciones SET votos = ? WHERE id = ?";
     
     //Creamos un statement
     sqlite3_stmt *sqlStatement;
@@ -119,11 +120,14 @@
     //Preparamos el statement
     if(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         NSLog(@"Problema al preparar el statement");
+        NSLog(@"%s", sqlite3_errmsg(bd));
         
     }
     
+    sqlite3_bind_int(sqlStatement, 1, 2);
+    
     //Añadimos al statement el parametro por el que modificará la canción
-    sqlite3_bind_int(sqlStatement, 1, [id_cancion intValue]);
+    sqlite3_bind_int(sqlStatement, 2    , [id_cancion intValue]);
     
     //Finalizamos el statement
     sqlite3_finalize(sqlStatement);
@@ -141,7 +145,7 @@
     }
     
     //Creamos la sentencia sql
-    const char *sentenciaSQL = "INSERT INTO canciones VALUES votos = votos + 1 WHERE id_cancion = ?";
+    const char *sentenciaSQL = "INSERT INTO canciones VALUES votos = votos - 1 WHERE id_cancion = ?";
     
     //Creamos un statement
     sqlite3_stmt *sqlStatement;

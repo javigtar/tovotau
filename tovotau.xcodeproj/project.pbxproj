@@ -82,13 +82,13 @@
 		FB7EB74F1A6664C6002E699D /* tovotauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tovotauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EB7541A6664C6002E699D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7EB7551A6664C6002E699D /* tovotauTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tovotauTests.m; sourceTree = "<group>"; };
-		FBB2A7091A94781B00AB6CD6 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		FBB2A7121A947A3D00AB6CD6 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		FBB2A7131A947A3D00AB6CD6 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		FBB2A7171A947C2700AB6CD6 /* icono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono.png; sourceTree = "<group>"; };
 		FBB2A7181A947C2700AB6CD6 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		FBB2A7191A947C2700AB6CD6 /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
 		FBB2A71A1A947C2700AB6CD6 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
+		FBB8E21E1A94926000A12EA3 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		FBBEA1CA1A7F945C009A9E37 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cancion.h; sourceTree = "<group>"; };
 		FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancionesDAO.h; sourceTree = "<group>"; };
 		FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		FB4D21AC1A8210B500B3125F /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				FBB8E21E1A94926000A12EA3 /* definitiva.sqlite */,
 				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
-				FBB2A7091A94781B00AB6CD6 /* definitiva.sqlite */,
 				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
 			);
 			name = SQLite;
