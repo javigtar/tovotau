@@ -11,7 +11,7 @@
 @interface ReproduciendoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *banner;
 @property (weak, nonatomic) IBOutlet UILabel *labelCancionPrincipal;
-@property (weak, nonatomic) IBOutlet MarqueeLabel *labelAnimado4Canciones;
+
 
 
 
