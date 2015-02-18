@@ -122,26 +122,26 @@
 
 -(void)cambioImagenTemporal{//Creo un hilo de proceso nuevo para no perjudicar a la vista cada vez que llame a la funcion cambiarImagen.
  
-    NSThread* ThreadMonstruo2 = [[NSThread alloc] initWithTarget:self
+    NSThread* HiloImagen = [[NSThread alloc] initWithTarget:self
                                                         selector:@selector(cambiarImagenBanner)
                                                           object: nil];
     
     
     
-    [ThreadMonstruo2 start];
+    [HiloImagen start];
     
     
     
 }
 
 
-/*
--(void)mostrarTop5Canciones (){
+
+-(void)mostrarTop5Canciones{
     NSMutableArray *top5Canciones = [[NSMutableArray alloc ]init];
     CancionesDAO *miscancionesdao = [[CancionesDAO alloc]init ];
     top5Canciones = [miscancionesdao obtenerTop5];
     
 
 }
-*/
+
 @end
