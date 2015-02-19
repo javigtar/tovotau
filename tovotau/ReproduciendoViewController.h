@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *banner;
 @property (weak, nonatomic) IBOutlet UILabel *labelCancionPrincipal;
 -(void) modificarLabelAnimado:(NSString*) cadena;
+@property (weak, nonatomic) IBOutlet UIImageView *imagenCancion;
 
 
 

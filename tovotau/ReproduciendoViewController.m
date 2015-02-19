@@ -173,6 +173,9 @@
     [nombreTop1 appendString:@" - "];
     [nombreTop1 appendString:top1Cancion.artista];
     
+    NSString *ImageURL = top1Cancion.imagen;
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
+    self.imagenCancion.image = [UIImage imageWithData:imageData];
     
     [self.labelCancionPrincipal setText:nombreTop1];
     [self modificarLabelAnimado:strRR];
