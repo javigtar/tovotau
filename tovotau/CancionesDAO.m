@@ -32,18 +32,15 @@
 
 -(id)init{
     self = [super init];
-    
-    //self.listaCanciones = [self obtenerCanciones];
-    
-    
-    // Set the documents directory path to the documentsDirectory property.
+        
+    //Obtenemos la ruta al directorio de los documentos de la aplicacion
     NSArray *rutas = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     self.directorioAplicacion = [rutas objectAtIndex:0];
     
-    // Keep the database filename.
+    //Nombre de la base de datos
     self.nombreBD = @"definitiva.sqlite";
     
-    // Copy the database file into the documents directory if necessary.
+    //Copiamos el archivo de la base de datos al directorio si no existe
     [self copiarBDalDirectorio];
     
     [self cargarListaCanciones];
@@ -64,14 +61,15 @@
         //String para almacenar los errores
         NSError *error;
     
+        //Borra el archivo de la base de datos (En caso de que añadamos o quitemos campos a la tabla)
+        //[[NSFileManager defaultManager] removeItemAtPath:rutaDestinoBD error:&error];
+    
         //Comprobamos si no existe el archivo de la base de datos en el directorio de la aplicacion
         if([[NSFileManager defaultManager] fileExistsAtPath:rutaDestinoBD] == NO){
             
             //Copiamos la base de datos de nuestro proyecto a nuestro directorio de los documentos de nuestra aplicacion
             [[NSFileManager defaultManager] copyItemAtPath:rutaOrigenBD toPath:rutaDestinoBD error:&error];
             
-            //Borra el archivo de la base de datos (En caso de que añadamos o quitemos campos a la tabla)
-            //[[NSFileManager defaultManager] removeItemAtPath:rutaDestinoBD error:&error];
         }   
     
         // Comprobamos si ha habido algún error para mostrarlo
@@ -198,7 +196,7 @@
         NSLog(@"%s", sqlite3_errmsg(sqliteDB));
     }
     
-    NSLog(@"%d", sqlite3_changes(sqliteDB));
+    sqlite3_changes(sqliteDB);
     
     //Finalizamos el statement
     sqlite3_finalize(sqlStatement);
