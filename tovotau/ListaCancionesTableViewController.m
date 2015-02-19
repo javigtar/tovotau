@@ -149,9 +149,11 @@
     
     //Obtemos la referencia al label del id de la cancion
     UILabel *id_cancion = (UILabel*)[sender.superview viewWithTag:5];
+    //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
+    UILabel *votos = (UILabel*)[sender.superview viewWithTag:6];
     
     //Sumamos un voto a la cancion con ese id
-    [self.listaCanciones sumarVotoACancion:id_cancion.text];
+    [self.listaCanciones sumarVotoACancion:id_cancion.text votosActuales:[votos.text integerValue]];
 }
 
 - (IBAction)quitarVotoCancion:(UIButton *)sender {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594F82211A95F8EE00380D73 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */; };
+		594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 594F82221A960CFE00380D73 /* definitiva.sqlite */; };
 		59DFABB71A927B4E009759C2 /* votar.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB51A927B4E009759C2 /* votar.png */; };
 		59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB61A927B4E009759C2 /* quitarVoto.png */; };
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
@@ -32,12 +34,10 @@
 		FBB2A71C1A947C2700AB6CD6 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A7181A947C2700AB6CD6 /* list.png */; };
 		FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A7191A947C2700AB6CD6 /* perfil.png */; };
 		FBB2A71E1A947C2700AB6CD6 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB2A71A1A947C2700AB6CD6 /* qr.png */; };
-		FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */; };
 		FBBEA1D51A7F945C009A9E37 /* CancionesDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */; };
 		FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D01A7F945C009A9E37 /* ModCancionViewController.m */; };
 		FBBEA1D71A7F945C009A9E37 /* ListaCancionesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D11A7F945C009A9E37 /* ListaCancionesTableViewController.m */; };
 		FBBEA1D81A7F945C009A9E37 /* Cancion.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA1D21A7F945C009A9E37 /* Cancion.m */; };
-		FBBEA1DA1A7F95F3009A9E37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */; };
 		FBDDBCF61A88BBFA00513252 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */; };
 		FBDDBCFE1A88BC4B00513252 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */; };
 		FBDDBD011A88BD7600513252 /* EscanerQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBD001A88BD7600513252 /* EscanerQRViewController.m */; };
@@ -54,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		594F82221A960CFE00380D73 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		59DFABB51A927B4E009759C2 /* votar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votar.png; sourceTree = "<group>"; };
 		59DFABB61A927B4E009759C2 /* quitarVoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitarVoto.png; sourceTree = "<group>"; };
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
@@ -88,10 +89,8 @@
 		FBB2A7181A947C2700AB6CD6 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		FBB2A7191A947C2700AB6CD6 /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
 		FBB2A71A1A947C2700AB6CD6 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
-		FBB8E21E1A94926000A12EA3 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		FBBEA1CA1A7F945C009A9E37 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cancion.h; sourceTree = "<group>"; };
 		FBBEA1CB1A7F945C009A9E37 /* CancionesDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancionesDAO.h; sourceTree = "<group>"; };
-		FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
 		FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancionesDAO.m; sourceTree = "<group>"; };
 		FBBEA1CE1A7F945C009A9E37 /* ListaCancionesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaCancionesTableViewController.h; sourceTree = "<group>"; };
 		FBBEA1CF1A7F945C009A9E37 /* ModCancionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModCancionViewController.h; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594F82211A95F8EE00380D73 /* libsqlite3.dylib in Frameworks */,
 				FBDDBCFE1A88BC4B00513252 /* libiconv.dylib in Frameworks */,
 				FBDDBCF61A88BBFA00513252 /* AVFoundation.framework in Frameworks */,
 				FB4D21B91A82120500B3125F /* CoreGraphics.framework in Frameworks */,
@@ -117,7 +117,6 @@
 				FB4D21B51A8211AA00B3125F /* UIKit.framework in Frameworks */,
 				FB4D21B31A8211A100B3125F /* QuartzCore.framework in Frameworks */,
 				FB4D21B11A82118E00B3125F /* CoreText.framework in Frameworks */,
-				FBBEA1DA1A7F95F3009A9E37 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +152,7 @@
 		FB4D21AC1A8210B500B3125F /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
-				FBB8E21E1A94926000A12EA3 /* definitiva.sqlite */,
-				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
-				FBBEA1CC1A7F945C009A9E37 /* mydatabase.sqlite */,
+				594F82221A960CFE00380D73 /* definitiva.sqlite */,
 			);
 			name = SQLite;
 			sourceTree = "<group>";
@@ -195,6 +192,7 @@
 		FB4D21AF1A82115900B3125F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */,
 				FBDDBCFD1A88BC4B00513252 /* libiconv.dylib */,
 				FBDDBCF51A88BBFA00513252 /* AVFoundation.framework */,
 				FB4D21B81A82120500B3125F /* CoreGraphics.framework */,
@@ -372,8 +370,8 @@
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
 				FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */,
 				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
-				FBBEA1D41A7F945C009A9E37 /* mydatabase.sqlite in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
+				594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */,
 				FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */,
 				FBB2A71E1A947C2700AB6CD6 /* qr.png in Resources */,
 				FBB2A71C1A947C2700AB6CD6 /* list.png in Resources */,

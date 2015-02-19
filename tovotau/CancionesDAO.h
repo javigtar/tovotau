@@ -10,18 +10,14 @@
 #import <sqlite3.h>
 #import "Cancion.h"
 
-@interface CancionesDAO : NSObject{
-    sqlite3* bd;
+@interface CancionesDAO : NSObject
     
-}
-- (NSMutableArray *) obtenerCanciones;
-- (NSMutableArray *) obtenerTop5;
-
-- (NSString *) obtenerRuta;
+-(NSMutableArray *) obtenerCanciones;
+-(NSMutableArray *) obtenerTop5;
 
 -(NSUInteger) numeroDeCanciones;
 -(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion;
 
--(void)sumarVotoACancion:(NSString*) id_cancion;
+-(void)sumarVotoACancion:(NSString*) id_cancion votosActuales:(NSInteger)votos;
 
 @end
