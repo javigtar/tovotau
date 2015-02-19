@@ -31,9 +31,12 @@
     [itemCuatro setTitle:@"Vota ya"];
     [itemCuatro setImage:[UIImage imageNamed:@"qr.png"]];
     
-    [[UITabBar appearance] setTintColor:[UIColor redColor]]; //ESTO CAMBIARÍA EL COLOR DEL ITEM SELECCIONADO
-    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"backgroundImg.jpg"]];
-    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"superpuesta.png"]];
+    [[UITabBar appearance] setTintColor:[UIColor greenColor]]; //ESTO CAMBIARÍA EL COLOR DEL ITEM SELECCIONADO
+   UIImage* tabBarBackground = [UIImage imageNamed:@"fondonegro.jpg"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    //[[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"backgroundImg.jpg"]];
+    //[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"superpuesta.png"]];
+    [[UITabBar appearance] setBackgroundColor:[UIColor blackColor]];
     
 }
 

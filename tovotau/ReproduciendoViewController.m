@@ -46,16 +46,16 @@
 -(void)modificarLabelAnimado:(NSString*) cadena{
    // NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:cadena];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:cadena];
-    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0,5)];
-    [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0,0)];
+    [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(10,11)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0,attributedString.length)];
     [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f] range:NSMakeRange(21, attributedString.length - 21)];
     
     self.proximasCanciones.attributedText = attributedString;
     
     // Animación del label de la lista de canciones
     self.proximasCanciones.marqueeType = MLContinuous;
-    self.proximasCanciones.scrollDuration = 8.0;
+    self.proximasCanciones.scrollDuration = 20.0;
     self.proximasCanciones.fadeLength = 15.0f;
     self.proximasCanciones.leadingBuffer = 40.0f;
 }

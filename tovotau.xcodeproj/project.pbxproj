@@ -11,6 +11,9 @@
 		594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 594F82221A960CFE00380D73 /* definitiva.sqlite */; };
 		59DFABB71A927B4E009759C2 /* votar.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB51A927B4E009759C2 /* votar.png */; };
 		59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB61A927B4E009759C2 /* quitarVoto.png */; };
+		EB2047D81A9668BB00E6B119 /* fondo-madera-negro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */; };
+		EB2047DE1A966D1500E6B119 /* dark2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047DD1A966D1500E6B119 /* dark2.jpg */; };
+		EB2047E01A966E4200E6B119 /* fondonegro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047DF1A966E4200E6B119 /* fondonegro.jpg */; };
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
@@ -57,6 +60,9 @@
 		594F82221A960CFE00380D73 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		59DFABB51A927B4E009759C2 /* votar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votar.png; sourceTree = "<group>"; };
 		59DFABB61A927B4E009759C2 /* quitarVoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitarVoto.png; sourceTree = "<group>"; };
+		EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fondo-madera-negro.jpg"; sourceTree = "<group>"; };
+		EB2047DD1A966D1500E6B119 /* dark2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark2.jpg; sourceTree = "<group>"; };
+		EB2047DF1A966E4200E6B119 /* fondonegro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondonegro.jpg; sourceTree = "<group>"; };
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
 		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				EB2047DF1A966E4200E6B119 /* fondonegro.jpg */,
+				EB2047DD1A966D1500E6B119 /* dark2.jpg */,
+				EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */,
 				FBB2A7171A947C2700AB6CD6 /* icono.png */,
 				FBB2A7181A947C2700AB6CD6 /* list.png */,
 				FBB2A7191A947C2700AB6CD6 /* perfil.png */,
@@ -367,9 +376,12 @@
 				59DFABB81A927B4E009759C2 /* quitarVoto.png in Resources */,
 				FB7EB7451A6664C6002E699D /* Main.storyboard in Resources */,
 				FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */,
+				EB2047DE1A966D1500E6B119 /* dark2.jpg in Resources */,
+				EB2047D81A9668BB00E6B119 /* fondo-madera-negro.jpg in Resources */,
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
 				FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */,
 				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
+				EB2047E01A966E4200E6B119 /* fondonegro.jpg in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
 				594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */,
 				FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */,

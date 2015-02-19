@@ -20,6 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-9O-DVP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="751"/>
+                                </variation>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leonardoDantes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I0u-dK-6wT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -78,7 +84,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El baile del pañuelo - Leonardo Dantés" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDd-Wv-EPb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El baile del pañuelo - Leonardo Dantés" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDd-Wv-EPb">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="his-u3-jxx">
@@ -86,7 +92,7 @@
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.70305931195078875" green="1" blue="0.099640008536556746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -97,6 +103,9 @@
                                     <mask key="constraints">
                                         <include reference="his-u3-jxx"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Animado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ob-cl-GcH" customClass="MarqueeLabel">
@@ -140,7 +149,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.047058828175067902" green="0.43137258291244507" blue="0.43921571969985962" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5Ob-cl-GcH" firstAttribute="top" secondItem="LDd-Wv-EPb" secondAttribute="bottom" constant="34" id="4GU-de-qB4">
                                 <variation key="widthClass=compact" constant="35"/>
@@ -160,7 +169,9 @@
                             <constraint firstItem="LDd-Wv-EPb" firstAttribute="top" secondItem="I0u-dK-6wT" secondAttribute="bottom" constant="47" id="czV-Sg-1r3">
                                 <variation key="widthClass=compact" constant="46"/>
                             </constraint>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yKj-DZ-VHp" secondAttribute="bottom" constant="61" id="fwx-an-b6h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yKj-DZ-VHp" secondAttribute="bottom" constant="61" id="fwx-an-b6h">
+                                <variation key="heightClass=regular-widthClass=compact" constant="22"/>
+                            </constraint>
                             <constraint firstItem="43p-2z-9R0" firstAttribute="leading" secondItem="deu-1r-aCg" secondAttribute="trailing" constant="2" id="iZN-fJ-gS8"/>
                             <constraint firstItem="deu-1r-aCg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mya-u2-RwG"/>
                             <constraint firstItem="deu-1r-aCg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="vDt-UX-Gb8"/>
@@ -170,6 +181,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Dg7-9O-DVP"/>
                                 <exclude reference="I0u-dK-6wT"/>
                                 <exclude reference="deu-1r-aCg"/>
                                 <exclude reference="43p-2z-9R0"/>
@@ -222,6 +234,9 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Dg7-9O-DVP"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="mya-u2-RwG"/>
                                 <include reference="fwx-an-b6h"/>
@@ -265,6 +280,7 @@
                                     <constraint firstAttribute="width" constant="79" id="sxC-ff-p87"/>
                                 </constraints>
                                 <state key="normal" title="Aceptar">
+                                    <color key="titleColor" red="0.70305931200000005" green="1" blue="0.099640008540000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -286,7 +302,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.047058828179999998" green="0.43137258290000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="t0G-OL-kvJ" secondAttribute="bottom" constant="280" id="03V-oS-Qs7"/>
                             <constraint firstItem="t0G-OL-kvJ" firstAttribute="leading" secondItem="nH2-JR-Pz7" secondAttribute="leadingMargin" constant="49" id="4Gy-59-1EK"/>
@@ -483,6 +499,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.047058828179999998" green="0.43137258290000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="i3U-T2-MaX">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -503,7 +520,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="sM0-M6-KhH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.49708201658423545" green="1" blue="0.12111161235258527" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -524,7 +541,7 @@
                                                 <constraint firstAttribute="width" constant="216" id="mRz-R8-uMA"/>
                                                 <constraint firstAttribute="height" constant="21" id="nEa-yI-sQ1"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -587,12 +604,12 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-xf-uyo">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-xf-uyo">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="216" id="t7d-NB-4I0"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -797,7 +814,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.047058828179999998" green="0.43137258290000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.007772640306122458" green="0.0063437503883908009" blue="0.0075486560416754027" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -858,6 +875,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dark2.jpg" width="375" height="670"/>
         <image name="leonardoDantes.jpg" width="250" height="257"/>
         <image name="quitarVoto.png" width="43" height="58"/>
         <image name="votar.png" width="43" height="58"/>
