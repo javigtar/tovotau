@@ -15,9 +15,8 @@
 -(NSMutableArray *) obtenerCanciones;
 -(NSMutableArray *) obtenerTop5;
 
--(NSUInteger) numeroDeCanciones;
 -(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion;
 
--(void)sumarVotoACancion:(NSString*) id_cancion votosActuales:(NSInteger)votos;
+-(void)modificarVotosCancion:(NSString*)id_cancion votosCancion:(NSInteger)votos;
 
 @end

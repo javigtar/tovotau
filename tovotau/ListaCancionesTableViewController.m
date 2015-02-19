@@ -137,37 +137,52 @@
 
 - (IBAction)votarCancion:(UIButton *)sender {
     
-    //Obtenemos la referencia al imageview del botón
-    UIImageView *imagenBoton = sender.imageView;
+    //Animamos el boton al pulsarlo
+    [self animarBotonVotos:sender];
     
-    //Animamos la imagen al pulsar el botón
-    [UIView animateWithDuration: 0.1 delay: 0.0 options: UIViewAnimationOptionAutoreverse animations:^{
-        imagenBoton.transform = CGAffineTransformMakeScale(2, 2);
-    }completion:^(BOOL finished){
-        imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
-    }];
+    //Modificamos los votos de la cancion
+    [self modificarVotoCancion:sender.superview votosAModificar:1];
     
-    //Obtemos la referencia al label del id de la cancion
-    UILabel *id_cancion = (UILabel*)[sender.superview viewWithTag:5];
-    //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
-    UILabel *votos = (UILabel*)[sender.superview viewWithTag:6];
-    
-    //Sumamos un voto a la cancion con ese id
-    [self.listaCanciones sumarVotoACancion:id_cancion.text votosActuales:[votos.text integerValue]];
 }
 
 - (IBAction)quitarVotoCancion:(UIButton *)sender {
     
-    //Obtenemos la referencia al imageview del botón
-    UIImageView *imagenBoton = sender.imageView;
+    //Animamos el boton al pulsarlo
+    [self animarBotonVotos:sender];
     
-    //Animamos la imagen al pulsar el botón
+    //Modificamos los votos de la cancion
+    [self modificarVotoCancion:sender.superview votosAModificar:-1];
+
+}
+
+-(void)animarBotonVotos:(UIButton*)boton{
+    
+    //Obtenemos la referencia al imageview del botón
+    UIImageView *imagenBoton = boton.imageView;
+    
+    //Animamos la imagen
     [UIView animateWithDuration: 0.1 delay: 0.0 options: UIViewAnimationOptionAutoreverse animations:^{
         imagenBoton.transform = CGAffineTransformMakeScale(2, 2);
     }completion:^(BOOL finished){
         imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
     }];
+    
+}
 
+-(void)modificarVotoCancion:(UIView*)filaCancion votosAModificar:(NSInteger)votos{
+    
+    //Obtemos la referencia al label del id de la cancion
+    UILabel *id_cancion = (UILabel*)[filaCancion viewWithTag:5];
+    //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
+    UILabel *numVotos = (UILabel*)[filaCancion viewWithTag:6];
+    
+    //Sumamos un voto a la cancion con ese id en la base de datos
+    [self.listaCanciones modificarVotosCancion:id_cancion.text votosCancion:[numVotos.text intValue] + votos];
+    
+    //Ponemos en el label los votos nuevos
+    numVotos.text = [[NSString alloc] initWithFormat:@"%ld", [numVotos.text intValue] + votos];
+    
+    
 }
 
 
