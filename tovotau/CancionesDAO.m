@@ -78,7 +78,7 @@
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
         }
-    //}
+    
 }
 
 -(NSMutableArray *)obtenerTop5{
@@ -159,8 +159,7 @@
         cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
-        //cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
-        NSLog(@"%@", [[NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)] stringValue]);
+        //cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];        
         cancion.votos = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)];
         cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
         
