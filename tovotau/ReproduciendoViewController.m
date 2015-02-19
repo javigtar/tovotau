@@ -143,17 +143,24 @@
 
 
 
--(void)mostrarTop5Canciones{
+-(void)mostrarTop5Canciones{//esta clase mostrara tanto la cancionq ue se esta reproduciendo como las 4 restantes en el label de abajo
+    NSMutableString* strRR=[[NSMutableString alloc]init];//la pondremos en el label
     NSMutableArray *top5Canciones = [[NSMutableArray alloc ]init];
     CancionesDAO *miscancionesdao = [[CancionesDAO alloc]init ];
     top5Canciones = [miscancionesdao obtenerTop5];
-    
-    Cancion *top1Cancion = [[Cancion alloc] init];
-    top1Cancion = [top5Canciones objectAtIndex: 1];
-    NSString* nombreTop1 = top1Cancion.nombreCancion;
-     NSString* artista = top1Cancion.artista;
-    
-    NSString* strRR = [NSString stringWithFormat:@"%@ %@", nombreTop1, artista];
+    for (int i=1; i<=4; i++) {
+        Cancion *top1Cancion = [[Cancion alloc] init];
+        top1Cancion = [top5Canciones objectAtIndex: i];
+        NSString* nombreTop1 = top1Cancion.nombreCancion;
+        NSString* artista = top1Cancion.artista;
+        NSString *numeroCancion =[NSString stringWithFormat:@"%d",i+1];
+        [strRR appendString:numeroCancion];
+        [strRR appendString:@" : "];
+        [strRR appendString:nombreTop1];
+        [strRR appendString:@"  -  "];
+        [strRR appendString:artista];
+        [strRR appendString:@"          "];
+    }
     [self modificarLabelAnimado:strRR];
 }
 
