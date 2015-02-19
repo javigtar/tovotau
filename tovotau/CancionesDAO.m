@@ -32,7 +32,7 @@
 
 -(id)init{
     self = [super init];
-        
+    
     //Obtenemos la ruta al directorio de los documentos de la aplicacion
     NSArray *rutas = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     self.directorioAplicacion = [rutas objectAtIndex:0];
