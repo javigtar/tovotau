@@ -8,11 +8,7 @@
 
 #import "ListaCancionesTableViewController.h"
 
-@interface ListaCancionesTableViewController (){
-    
-    BOOL modoBusqueda; //Variable que controla si se esta buscando canciones o las muestra todas
-    
-}
+@interface ListaCancionesTableViewController ()
 
 @property (nonatomic,strong) CancionesDAO *listaCanciones;
 
@@ -30,8 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    modoBusqueda = false;
     
     self.listaCanciones = [[CancionesDAO alloc] init];
     
@@ -62,9 +56,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    //Comprobamos si está eno modo busqueda para que muestre tantas filas como el total de canciones
+    //Comprobamos si el array de canciones filtradas no es nulo para que muestre tantas filas como el total de canciones
     //o como canciones filtradas haya
-    if(modoBusqueda){
+    if(self.cancionesFiltradas){
         
         return self.cancionesFiltradas.count;
         
@@ -89,10 +83,15 @@
     UILabel *nombreCancion = (UILabel*)[self.view viewWithTag:3];
     //Obtenemos la referencia al label con la etiqueta 4 que corresponde al álbum
     UILabel *album = (UILabel*)[self.view viewWithTag:4];
+    //Obtenemos la referencia al label con la etiqueta 5 que corresponde al id de la cancion
+    //No se visualiza nada, solo es para utilizarlo a la hora de votar
+    UILabel *id_cancion = (UILabel*)[self.view viewWithTag:5];
+    //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
+    UILabel *votos = (UILabel*)[self.view viewWithTag:6];
     
-    //Comprobamos si está o no en modo búsqueda para obtener la cancion del array de todas las canciones
+    //Comprobamos si el array de canciones filtradas no es nulo para obtener la cancion del array de todas las canciones
     //o del array de las canciones filtradas
-    if (modoBusqueda) {
+    if (self.cancionesFiltradas) {
         
         cancion = [self.cancionesFiltradas objectAtIndex:indexPath.row];
         
@@ -105,6 +104,8 @@
     artista.text = cancion.artista;
     nombreCancion.text = cancion.nombreCancion;
     album.text = cancion.album;
+    id_cancion.text = cancion.id_cancion;
+    votos.text = [cancion.votos stringValue];
     
     return cell;
 
@@ -122,13 +123,11 @@
         //Filtramos las canciones según el predicado
         self.cancionesFiltradas = [self.canciones filteredArrayUsingPredicate:resultPredicate];
         
-        //Ponemos a true el modo busqueda para que muestre la lista de las canciones filtradas
-        modoBusqueda = true;
-        
+     //Si no hay nada escrito en la barra de busqueda ponemos a nil el array de canciones filtradas para que muestre
+     //toda la lista de canciones al recargar el tableview
     }else{
         
-        //Si en la barra de busqueda no hay nada escrito ponemos a false el modo de busqueda para que muestre todas las canciones
-        modoBusqueda = false;
+        self.cancionesFiltradas = nil;
     }
     
     //Recargamos los datos de la tabla
@@ -147,6 +146,12 @@
     }completion:^(BOOL finished){
         imagenBoton.transform = CGAffineTransformMakeScale(1, 1);
     }];
+    
+    //Obtemos la referencia al label del id de la cancion
+    UILabel *id_cancion = (UILabel*)[sender.superview viewWithTag:5];
+    
+    //Sumamos un voto a la cancion con ese id
+    [self.listaCanciones sumarVotoACancion:id_cancion.text];
 }
 
 - (IBAction)quitarVotoCancion:(UIButton *)sender {

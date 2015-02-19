@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cancion : NSObject{
-   
-}
+@interface Cancion : NSObject
 
-@property (nonatomic) NSInteger cod_cancion;
+@property (nonatomic) NSString *id_cancion;
 @property (nonatomic) NSString *nombreCancion;
 @property (nonatomic) NSString *artista;
 @property (nonatomic) NSString *album;
 @property (nonatomic) NSString *imagen;
-@property (nonatomic) NSString *votos;
+@property (nonatomic) NSNumber *duracion;
+@property (nonatomic) NSNumber *votos;
 
 @end

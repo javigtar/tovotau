@@ -35,22 +35,29 @@
     [NSTimer scheduledTimerWithTimeInterval:15.0f
                                      target:self selector:@selector(cambioImagenTemporal) userInfo:nil repeats:YES];
     
+    [self mostrarTop5Canciones];
     
+   
+    
+   
+     
+}
+
+-(void)modificarLabelAnimado:(NSString*) cadena{
+   // NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:cadena];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:cadena];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0,5)];
+    [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f] range:NSMakeRange(21, attributedString.length - 21)];
+    
+    self.proximasCanciones.attributedText = attributedString;
     
     // Animación del label de la lista de canciones
     self.proximasCanciones.marqueeType = MLContinuous;
     self.proximasCanciones.scrollDuration = 8.0;
     self.proximasCanciones.fadeLength = 15.0f;
     self.proximasCanciones.leadingBuffer = 40.0f;
-    
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"This is a long string, that's also an attributed string, which works just as well!"];    
-    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica-Bold" size:18.0f] range:NSMakeRange(0,5)];
-  [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(10,11)];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.234 green:0.234 blue:0.234 alpha:1.000] range:NSMakeRange(0,attributedString.length)];
-    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f] range:NSMakeRange(21, attributedString.length - 21)];
-    
-    self.proximasCanciones.attributedText = attributedString;
-     
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,26 +129,32 @@
 
 -(void)cambioImagenTemporal{//Creo un hilo de proceso nuevo para no perjudicar a la vista cada vez que llame a la funcion cambiarImagen.
  
-    NSThread* ThreadMonstruo2 = [[NSThread alloc] initWithTarget:self
+    NSThread* HiloImagen = [[NSThread alloc] initWithTarget:self
                                                         selector:@selector(cambiarImagenBanner)
                                                           object: nil];
     
     
     
-    [ThreadMonstruo2 start];
+    [HiloImagen start];
     
     
     
 }
 
 
-/*
--(void)mostrarTop5Canciones (){
+
+-(void)mostrarTop5Canciones{
     NSMutableArray *top5Canciones = [[NSMutableArray alloc ]init];
     CancionesDAO *miscancionesdao = [[CancionesDAO alloc]init ];
     top5Canciones = [miscancionesdao obtenerTop5];
     
-
+    Cancion *top1Cancion = [[Cancion alloc] init];
+    top1Cancion = [top5Canciones objectAtIndex: 1];
+    NSString* nombreTop1 = top1Cancion.nombreCancion;
+     NSString* artista = top1Cancion.artista;
+    
+    NSString* strRR = [NSString stringWithFormat:@"%@ %@", nombreTop1, artista];
+    [self modificarLabelAnimado:strRR];
 }
-*/
+
 @end

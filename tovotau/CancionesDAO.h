@@ -22,4 +22,6 @@
 -(NSUInteger) numeroDeCanciones;
 -(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion;
 
+-(void)sumarVotoACancion:(NSString*) id_cancion;
+
 @end

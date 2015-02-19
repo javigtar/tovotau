@@ -10,6 +10,8 @@
 
 @interface ReproduciendoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *banner;
+@property (weak, nonatomic) IBOutlet UILabel *labelCancionPrincipal;
+-(void) modificarLabelAnimado:(NSString*) cadena;
 
 
 
