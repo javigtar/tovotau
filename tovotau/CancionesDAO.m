@@ -43,7 +43,7 @@
     //Copiamos el archivo de la base de datos al directorio si no existe
     [self copiarBDalDirectorio];
     
-    [self cargarListaCanciones];
+    //[self cargarListaCanciones];
     
     return self;
     
@@ -215,9 +215,6 @@
     return [self.listaCanciones objectAtIndex:indiceDeCancion];
 }
 
-
-
-
 -(NSNumber*) DuracionTop1{
 
     
@@ -248,9 +245,6 @@
 }
 
 
-
-
-
 -(NSString*) DevuelveTop1Cancion{
     NSString *po;
     //Esta funcion obtiene las 5 primeras canciones mas votadas
@@ -276,44 +270,42 @@
     
 }
 
-/*
--(void)eliminarVotos:(NSInteger)id_cancion votosCancion:(NSInteger)votos{
+-(NSNumber*)canjearCodigoQR:(NSString*)codigo{   
+   
     
-    //Comprobamos si se puede conectar
-    if((sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK)){
+    //Comprobamos si la base de datos se ha abierto correctamente
+    if(sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK){
+        
         NSLog(@"No se puede conectar con la BD");
     }
     
+    sqlite3_stmt *sqlStatement;
+    
     //Construimos el string de la sentencia
-    NSString *sql = [NSString stringWithFormat:@"UPDATE canciones SET votos = %ld WHERE id = %ld", votos,id_cancion];
+    NSString *sql = [NSString stringWithFormat:@"SELECT restantes FROM qr WHERE codigo = %@", codigo];
     
     //Asignamos el string de la sentencia a esta variable
     const char *sentenciaSQL = [sql UTF8String];
     
-    //Creamos un statement
-    sqlite3_stmt *sqlStatement;
-    
-    //Preparamos el statement
-    if(sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
-        NSLog(@"Problema al preparar el statement");
-        NSLog(@"%s", sqlite3_errmsg(sqliteDB));
-    }
-    
-    //Ejecutamos el statement
-    if(sqlite3_step(sqlStatement) != SQLITE_DONE){
+    //Cargamos en memoria los datos de la base de datos
+    if (sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         
-        NSLog(@"%s", sqlite3_errmsg(sqliteDB));
+        NSLog(@"Problema al preparar el statement");
     }
     
-    sqlite3_changes(sqliteDB);
+    //Comprobamos si ha encontrado el código qr en la base de datos
+    if (sqlite3_step(sqlStatement) == SQLITE_ROW) {
+        
+        //Devolvemos los votos restantes
+        return [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 0)];
+    }
     
-    //Finalizamos el statement
-    sqlite3_finalize(sqlStatement);
-    
-    //Cerramos la conexion a la BD
-    sqlite3_close(sqliteDB);
+    //Si no lo ha encontrado devolvemos 0
+    return [NSNumber numberWithInt:0];    
+
 }
-*/
+
+
 
 
 @end

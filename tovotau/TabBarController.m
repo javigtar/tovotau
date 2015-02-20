@@ -23,11 +23,8 @@
     [itemUno setSelectedImage:[UIImage imageNamed:@"champagne.png"]];//CAMBIA LA IMAGEN CUANDO EL ITEM ES SELECCIONADO
     UITabBarItem *itemDos = tabBar.items[1];
     [itemDos setTitle:@"Lista"];
-    [itemDos setImage:[UIImage imageNamed:@"list.png"]];
-    UITabBarItem *itemTres = tabBar.items[2];
-    [itemTres setTitle:@"Perfil"];
-    [itemTres setImage:[UIImage imageNamed:@"perfil.png"]];
-    UITabBarItem *itemCuatro = tabBar.items[3];
+    [itemDos setImage:[UIImage imageNamed:@"list.png"]];    
+    UITabBarItem *itemCuatro = tabBar.items[2];
     [itemCuatro setTitle:@"Vota ya"];
     [itemCuatro setImage:[UIImage imageNamed:@"qr.png"]];
     
@@ -45,14 +42,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

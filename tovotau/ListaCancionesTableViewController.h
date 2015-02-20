@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CancionesDAO.h"
-#import "ModCancionViewController.h"
 
 @interface ListaCancionesTableViewController : UITableViewController <UISearchBarDelegate>
 

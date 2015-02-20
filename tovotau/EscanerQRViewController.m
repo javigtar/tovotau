@@ -7,6 +7,8 @@
 //
 
 #import "EscanerQRViewController.h"
+#import "CancionesDAO.h"
+#import "ControladorVotos.h"
 
 @interface EscanerQRViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {
@@ -39,17 +41,6 @@
     highlightView.layer.borderColor = [UIColor greenColor].CGColor;
     highlightView.layer.borderWidth = 3;
     [self.view addSubview:highlightView];
-    
-    /*
-    label = [[UILabel alloc] init];
-    label.frame = CGRectMake(0, self.view.bounds.size.height - 40, self.view.bounds.size.width, 40);
-    label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    label.backgroundColor = [UIColor colorWithWhite:0.15 alpha:0.65];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"(none)";
-    [self.view addSubview:label];
-     */
     
     self.codigoQRTexto.text = @"Escaneando...";
     self.codigoQRTexto.textAlignment = NSTextAlignmentCenter;
@@ -87,18 +78,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)botonAceptar:(id)sender {
     
+    [self comprobarCodigoQR];
     
 }
 
@@ -130,6 +113,40 @@
     }
     
     highlightView.frame = highlightViewRect;
+}
+
+-(void)comprobarCodigoQR{
+    
+    CancionesDAO *bdCanciones = [[CancionesDAO alloc] init];
+    
+    NSNumber *votos = [NSNumber numberWithInt:[[bdCanciones canjearCodigoQR:self.codigoQRTexto.text] intValue]];
+    
+    if ([votos intValue] != 0 ) {
+        
+        [ControladorVotos instanciaControladorVotos].votosRestantes = votos;
+        
+        //Creamos el mensaje que se mostrará en un alert
+        NSString *mensaje = [[NSString alloc]initWithFormat:@"Has ganado %d votos", [votos intValue]];
+        
+        //Mostramos un alert con el mensaje
+        [self mostrarAlertView:@"" mensajeAMostrar:mensaje];
+        
+    }else{
+        
+        //Mostramos un alert con el mensaje
+        [self mostrarAlertView:@"" mensajeAMostrar:@"Codigo incorrecto"];
+        
+    }
+    
+    
+}
+
+//Muestra un cuadro de alerta con el titulo y el mensaje pasados como parametro
+-(void)mostrarAlertView:(NSString*)titulo mensajeAMostrar:(NSString*)mensaje{
+    
+    UIAlertView *informacion = [[UIAlertView alloc] initWithTitle:titulo message:mensaje delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+    
+    [informacion show];
 }
 
 @end
