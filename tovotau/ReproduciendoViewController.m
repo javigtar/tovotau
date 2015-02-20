@@ -160,6 +160,7 @@
         CancionTop = [top5Canciones objectAtIndex: i];
         NSString* nombreTop1 = CancionTop.nombreCancion;
         NSString* artista = CancionTop.artista;
+        //voy añadiendo valores a la cadena mutable string y separando el ttulo y el artista por guiones
         NSString *numeroCancion =[NSString stringWithFormat:@"%d",i+1];
         [strRR appendString:numeroCancion];
         [strRR appendString:@" : "];
@@ -169,17 +170,25 @@
         [strRR appendString:@"          "];
     }
     
+    
     Cancion *top1Cancion = [top5Canciones objectAtIndex: 0];
-    NSMutableString* nombreTop1=[[NSMutableString alloc]init];
-    [nombreTop1 appendString:top1Cancion.nombreCancion];
-    [nombreTop1 appendString:@" - "];
-    [nombreTop1 appendString:top1Cancion.artista];
+  
     
     NSString *ImageURL = top1Cancion.imagenUrl;
+    //creo un NSdate con formato para URL
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
-    self.imagenCancion.image = [UIImage imageWithData:imageData];
-    
-    [self.labelCancionPrincipal setText:nombreTop1];
+    //efecto de disolver cuando la cancion principal cambie.
+    [UIView transitionWithView:self.imagenCancion
+                      duration:5
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        self.imagenCancion.image = [UIImage imageWithData:imageData];
+                    } completion:nil];
+
+ 
+    //cambio el contenido de los label.
+    [self.labelCancionPrincipal setText:top1Cancion.artista];
+    [self.tituloCancion setText:top1Cancion.nombreCancion];
     [self modificarLabelAnimado:strRR];
 }
 
