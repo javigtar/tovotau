@@ -190,8 +190,7 @@
     [self.labelCancionPrincipal setText:top1Cancion.artista];
     [self.tituloCancion setText:top1Cancion.nombreCancion];
     [self modificarLabelAnimado:strRR];
-    [self.imagenCancion.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [self.imagenCancion.layer setBorderWidth: 2.0];
+    
 }
 
 
