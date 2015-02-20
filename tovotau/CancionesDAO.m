@@ -116,6 +116,8 @@
 //Devolvemos un array con las canciones de la base de datos
 - (NSMutableArray *) obtenerCanciones{
     
+    [self cargarListaCanciones];
+    
     return self.listaCanciones;
     
 }

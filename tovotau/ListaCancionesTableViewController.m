@@ -47,6 +47,9 @@
     //Guardamos las canciones en un array
     self.canciones = [self.listaCanciones obtenerCanciones];
     
+    //Recargamos el table view para que muestre los votos correctos
+    [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
