@@ -255,7 +255,7 @@
     if(!(sqlite3_open([ubicacionDB UTF8String], &sqliteDB) == SQLITE_OK)){
         NSLog(@"No se puede conectar con la BD");
     }
-    const char *sentenciaSQL = "select * from canciones order by votos LIMIT 1;";
+    const char *sentenciaSQL = "select * from canciones order by votos desc LIMIT 1;";
     sqlite3_stmt *sqlStatement;
     if(sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         NSLog(@"Problema al preparar el statement");
@@ -272,5 +272,44 @@
     return cancion.id_cancion;
     
 }
+
+
+-(void)eliminarVotos:(NSInteger)id_cancion votosCancion:(NSInteger)votos{
+    
+    //Comprobamos si se puede conectar
+    if((sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK)){
+        NSLog(@"No se puede conectar con la BD");
+    }
+    
+    //Construimos el string de la sentencia
+    NSString *sql = [NSString stringWithFormat:@"UPDATE canciones SET votos = %ld WHERE id = %ld", votos,id_cancion];
+    
+    //Asignamos el string de la sentencia a esta variable
+    const char *sentenciaSQL = [sql UTF8String];
+    
+    //Creamos un statement
+    sqlite3_stmt *sqlStatement;
+    
+    //Preparamos el statement
+    if(sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
+        NSLog(@"Problema al preparar el statement");
+        NSLog(@"%s", sqlite3_errmsg(sqliteDB));
+    }
+    
+    //Ejecutamos el statement
+    if(sqlite3_step(sqlStatement) != SQLITE_DONE){
+        
+        NSLog(@"%s", sqlite3_errmsg(sqliteDB));
+    }
+    
+    sqlite3_changes(sqliteDB);
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
+}
+
 
 @end

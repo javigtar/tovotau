@@ -29,7 +29,7 @@
     
     //Añadimos las canciones de la BD a una MutableArray
     self.listaCanciones = [cancionesDAO obtenerCanciones];
-     CancionesDAO *cancionDAO = [[CancionesDAO alloc] init];
+
  
    //Bucle que se ejecutara cada 15 segundos llamando a la funcion para llamar al banner
     [NSTimer scheduledTimerWithTimeInterval:15.0f
@@ -50,11 +50,13 @@
 
 -(void)reproducirCanciones{
  CancionesDAO *cancionDAO = [[CancionesDAO alloc] init];
+    //obtengo el que mas votos tiene
    NSString* top1 = [cancionDAO DevuelveTop1Cancion];
- [cancionDAO modificarVotosCancion:top1 votosCancion:0];
-  
+    //cambio los votos a 0 ya que la cancion ya s eha reproducido
+ [cancionDAO eliminarVotos:[top1 intValue] votosCancion:0];
+  //vuelvo a hacer un select de los 5 primeros.
    [self mostrarTop5Canciones];
-     // [self.view setNeedsDisplay];
+  
 }
 
 
