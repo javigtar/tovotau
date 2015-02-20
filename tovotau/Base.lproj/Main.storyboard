@@ -104,9 +104,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="438" width="400" height="43"/>
-                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-DZ-VHp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -226,26 +223,26 @@
                                 <exclude reference="deu-1r-aCg"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DKL-D3-wFJ"/>
+                                <exclude reference="iZN-fJ-gS8"/>
+                                <exclude reference="4GU-de-qB4"/>
+                                <exclude reference="G5O-L0-crj"/>
+                                <exclude reference="zbJ-mi-Cwr"/>
+                                <exclude reference="FNG-MK-DWZ"/>
+                                <exclude reference="czV-Sg-1r3"/>
+                                <exclude reference="9Sv-50-uFp"/>
+                                <exclude reference="RW9-d5-86w"/>
+                                <exclude reference="cTK-ul-xNg"/>
                                 <exclude reference="GCR-p8-G4a"/>
                                 <exclude reference="PV6-hn-ah7"/>
                                 <exclude reference="mya-u2-RwG"/>
                                 <exclude reference="vDt-UX-Gb8"/>
-                                <exclude reference="iZN-fJ-gS8"/>
+                                <exclude reference="fwx-an-b6h"/>
+                                <exclude reference="DKL-D3-wFJ"/>
                                 <exclude reference="Imc-vP-zOf"/>
                                 <exclude reference="ZLJ-av-1rn"/>
                                 <exclude reference="vjf-Jd-AbU"/>
-                                <exclude reference="9Sv-50-uFp"/>
-                                <exclude reference="RW9-d5-86w"/>
-                                <exclude reference="cTK-ul-xNg"/>
-                                <exclude reference="FNG-MK-DWZ"/>
-                                <exclude reference="czV-Sg-1r3"/>
-                                <exclude reference="4GU-de-qB4"/>
-                                <exclude reference="G5O-L0-crj"/>
-                                <exclude reference="zbJ-mi-Cwr"/>
                                 <exclude reference="UbJ-tr-t66"/>
                                 <exclude reference="z8i-pO-cKO"/>
-                                <exclude reference="fwx-an-b6h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -258,18 +255,18 @@
                                 <include reference="deu-1r-aCg"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GCR-p8-G4a"/>
-                                <include reference="PV6-hn-ah7"/>
-                                <include reference="vDt-UX-Gb8"/>
                                 <include reference="iZN-fJ-gS8"/>
-                                <include reference="Imc-vP-zOf"/>
-                                <include reference="ZLJ-av-1rn"/>
-                                <include reference="vjf-Jd-AbU"/>
-                                <include reference="FNG-MK-DWZ"/>
-                                <include reference="czV-Sg-1r3"/>
                                 <include reference="4GU-de-qB4"/>
                                 <include reference="G5O-L0-crj"/>
                                 <include reference="zbJ-mi-Cwr"/>
+                                <include reference="FNG-MK-DWZ"/>
+                                <include reference="czV-Sg-1r3"/>
+                                <include reference="GCR-p8-G4a"/>
+                                <include reference="PV6-hn-ah7"/>
+                                <include reference="vDt-UX-Gb8"/>
+                                <include reference="Imc-vP-zOf"/>
+                                <include reference="ZLJ-av-1rn"/>
+                                <include reference="vjf-Jd-AbU"/>
                                 <include reference="UbJ-tr-t66"/>
                             </mask>
                         </variation>
@@ -279,13 +276,13 @@
                                 <include reference="QKv-9z-WOi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DKL-D3-wFJ"/>
-                                <include reference="mya-u2-RwG"/>
                                 <include reference="9Sv-50-uFp"/>
                                 <include reference="RW9-d5-86w"/>
                                 <include reference="cTK-ul-xNg"/>
-                                <include reference="z8i-pO-cKO"/>
+                                <include reference="mya-u2-RwG"/>
                                 <include reference="fwx-an-b6h"/>
+                                <include reference="DKL-D3-wFJ"/>
+                                <include reference="z8i-pO-cKO"/>
                             </mask>
                         </variation>
                     </view>
@@ -893,7 +890,6 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SOE-H2-oNH"/>
                         <segue destination="r5U-ZK-8f1" kind="relationship" relationship="viewControllers" id="PdT-ae-Sg0"/>
-                        <segue destination="SDA-Zu-xPM" kind="relationship" relationship="viewControllers" id="b4c-dJ-Mh4"/>
                         <segue destination="1Ph-Qh-viG" kind="relationship" relationship="viewControllers" id="eOt-eo-qud"/>
                     </connections>
                 </tabBarController>

@@ -25,11 +25,8 @@
     [itemDos setTitle:@"Lista"];
     [itemDos setImage:[UIImage imageNamed:@"list.png"]];
     UITabBarItem *itemTres = tabBar.items[2];
-    [itemTres setTitle:@"Perfil"];
-    [itemTres setImage:[UIImage imageNamed:@"perfil.png"]];
-    UITabBarItem *itemCuatro = tabBar.items[3];
-    [itemCuatro setTitle:@"Vota ya"];
-    [itemCuatro setImage:[UIImage imageNamed:@"qr.png"]];
+    [itemTres setTitle:@"Vota ya"];
+    [itemTres setImage:[UIImage imageNamed:@"qr.png"]];
     
     [[UITabBar appearance] setTintColor:[UIColor greenColor]]; //ESTO CAMBIARÍA EL COLOR DEL ITEM SELECCIONADO
    UIImage* tabBarBackground = [UIImage imageNamed:@"fondonegro.jpg"];
