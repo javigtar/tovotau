@@ -7,6 +7,7 @@
 //
 
 #import "ListaCancionesTableViewController.h"
+#import "ControladorVotos.h"
 
 @interface ListaCancionesTableViewController ()
 
@@ -29,9 +30,6 @@
     
     self.listaCanciones = [[CancionesDAO alloc] init];
     
-    //Guardamos las canciones en un array
-    self.canciones = [self.listaCanciones obtenerCanciones];
-    
     //Ponemos como delegado del search bar a esta clase
     self.searchBar.delegate = self;
     
@@ -40,6 +38,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+//Se llamara a este metodo cada vez que aparezca la vista
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //Guardamos las canciones en un array
+    self.canciones = [self.listaCanciones obtenerCanciones];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +84,8 @@
     //Creamos un objeto cancion
     Cancion *cancion;
     
+    //Obtenemos la referencia al label con la etiqueta 1 que corresponde a la imagen
+    UIImageView *imagen = (UIImageView*)[self.view viewWithTag:1];
     //Obtenemos la referencia al label con la etiqueta 2 que corresponde al artista
     UILabel *artista = (UILabel*)[self.view viewWithTag:2];
     //Obtenemos la referencia al label con la etiqueta 3 que corresponde al nombre de la canción
@@ -106,6 +115,9 @@
     album.text = cancion.album;
     id_cancion.text = cancion.id_cancion;
     votos.text = [cancion.votos stringValue];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cancion.imagen] options:NSDataReadingMapped error:nil];
+    imagen.image = [UIImage imageWithData:imageData];
     
     return cell;
 
@@ -176,13 +188,49 @@
     //Obtenemos la referencia al label con la etiqueta 6 que corresponde a los votos
     UILabel *numVotos = (UILabel*)[filaCancion viewWithTag:6];
     
-    //Sumamos un voto a la cancion con ese id en la base de datos
-    [self.listaCanciones modificarVotosCancion:id_cancion.text votosCancion:[numVotos.text intValue] + votos];
+    //Obtenemos los votos restantes del usuario
+    NSNumber *votosRestantes = [[ControladorVotos instanciaControladorVotos] votosRestantes];
     
-    //Ponemos en el label los votos nuevos
-    numVotos.text = [[NSString alloc] initWithFormat:@"%ld", [numVotos.text intValue] + votos];
+    //Comprobamos si los votos restantes son mayores que 0
+    if ([votosRestantes intValue] > 0) {
+        
+        //Modificamos los votos de la cancion con ese id en la base de datos
+        [self.listaCanciones modificarVotosCancion:id_cancion.text votosCancion:[numVotos.text intValue] + votos];
+        
+        //Ponemos en el label los votos nuevos
+        numVotos.text = [[NSString alloc] initWithFormat:@"%ld", [numVotos.text intValue] + votos];
+        
+        //Restamos 1 a los votos restantes
+        votosRestantes = [NSNumber numberWithInt:[votosRestantes intValue] -1];
+        
+        //Actualizamos los votos
+        [[ControladorVotos instanciaControladorVotos] actualizarVotos:[votosRestantes integerValue]];
+        
+        //Creamos el mensaje que se mostrará en un alert
+        NSString *mensaje = [[NSString alloc]initWithFormat:@"%d\rGracias por participar", [votosRestantes intValue]];
+        
+        //Mostramos el alert
+        [self mostrarAlertView:@"Votos Restantes" mensajeAMostrar:mensaje];
+        
+    }else{
+        
+        //Creamos el mensaje que se mostrará en un alert
+        NSString *mensaje = [[NSString alloc]initWithFormat:@"No te quedan mas votos para seguir votando. CONSUME!!"];
+        
+        //Mostramos el alert
+        [self mostrarAlertView:@"Votos Insuficientes" mensajeAMostrar:mensaje];
+    }
     
     
+    
+}
+
+//Muestra un cuadro de alerta con el titulo y el mensaje pasados como parametro
+-(void)mostrarAlertView:(NSString*)titulo mensajeAMostrar:(NSString*)mensaje{
+    
+    UIAlertView *informacion = [[UIAlertView alloc] initWithTitle:titulo message:mensaje delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+    
+    [informacion show];
 }
 
 

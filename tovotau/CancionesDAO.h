@@ -18,7 +18,6 @@
 -(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion;
 
 -(void)modificarVotosCancion:(NSString*)id_cancion votosCancion:(NSInteger)votos;
--(void)eliminarVotos:(NSInteger)id_cancion votosCancion:(NSInteger)votos;
 -(NSNumber*)DuracionTop1;
 
 -(NSString*)DevuelveTop1Cancion;

@@ -157,7 +157,7 @@
         cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
-        //cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];        
+        cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];        
         cancion.votos = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)];
         cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
         
@@ -273,7 +273,7 @@
     
 }
 
-
+/*
 -(void)eliminarVotos:(NSInteger)id_cancion votosCancion:(NSInteger)votos{
     
     //Comprobamos si se puede conectar
@@ -310,6 +310,7 @@
     //Cerramos la conexion a la BD
     sqlite3_close(sqliteDB);
 }
+*/
 
 
 @end

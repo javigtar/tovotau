@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592941751A9725E300528C44 /* ControladorVotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 592941741A9725E300528C44 /* ControladorVotos.m */; };
 		594F82211A95F8EE00380D73 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBEA1D91A7F95F3009A9E37 /* libsqlite3.dylib */; };
 		594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 594F82221A960CFE00380D73 /* definitiva.sqlite */; };
 		59DFABB71A927B4E009759C2 /* votar.png in Resources */ = {isa = PBXBuildFile; fileRef = 59DFABB51A927B4E009759C2 /* votar.png */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		592941731A9725E300528C44 /* ControladorVotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorVotos.h; sourceTree = "<group>"; };
+		592941741A9725E300528C44 /* ControladorVotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorVotos.m; sourceTree = "<group>"; };
 		594F82221A960CFE00380D73 /* definitiva.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = definitiva.sqlite; sourceTree = "<group>"; };
 		59DFABB51A927B4E009759C2 /* votar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votar.png; sourceTree = "<group>"; };
 		59DFABB61A927B4E009759C2 /* quitarVoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitarVoto.png; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				FBBEA1CD1A7F945C009A9E37 /* CancionesDAO.m */,
 				FBBEA1CA1A7F945C009A9E37 /* Cancion.h */,
 				FBBEA1D21A7F945C009A9E37 /* Cancion.m */,
+				592941731A9725E300528C44 /* ControladorVotos.h */,
+				592941741A9725E300528C44 /* ControladorVotos.m */,
 			);
 			name = Clases;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				FBDDBD011A88BD7600513252 /* EscanerQRViewController.m in Sources */,
 				FB7EB73C1A6664C6002E699D /* main.m in Sources */,
 				FBBEA1D61A7F945C009A9E37 /* ModCancionViewController.m in Sources */,
+				592941751A9725E300528C44 /* ControladorVotos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

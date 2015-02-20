@@ -10,11 +10,13 @@
 #import "MarqueeLabel.h"
 #import "CancionesDAO.h"
 #import "Cancion.h"
+#import "ControladorVotos.h"
 
 @interface ReproduciendoViewController ()
 
 @property (weak, nonatomic) IBOutlet MarqueeLabel *proximasCanciones;
 @property (nonatomic, strong) NSMutableArray *listaCanciones;
+@property (weak, nonatomic) IBOutlet UILabel *votosRestantes;
 @property (nonatomic, assign) BOOL reproduciendo;
 @end
 
@@ -22,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    
     self.reproduciendo=YES;
     //Instanciamos la clase engargada de obtener las canciones de la BD
     CancionesDAO *cancionesDAO = [[CancionesDAO alloc] init];
@@ -40,12 +43,17 @@
    
     
     [self mostrarTop5Canciones];
-    
-   
- 
+}
 
-   
-     
+//Se llamara a este metodo cada vez que aparezca la vista
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //Ponemos el valor de los votos restantes
+    self.votosRestantes.text = [[[ControladorVotos instanciaControladorVotos] votosRestantes]stringValue];
+    
+    [self mostrarTop5Canciones];
+
 }
 
 -(void)reproducirCanciones{
@@ -53,7 +61,7 @@
     //obtengo el que mas votos tiene
    NSString* top1 = [cancionDAO DevuelveTop1Cancion];
     //cambio los votos a 0 ya que la cancion ya s eha reproducido
- [cancionDAO eliminarVotos:[top1 intValue] votosCancion:0];
+ [cancionDAO modificarVotosCancion:top1 votosCancion:0];
   //vuelvo a hacer un select de los 5 primeros.
    [self mostrarTop5Canciones];
   

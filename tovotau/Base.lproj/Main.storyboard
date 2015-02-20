@@ -250,6 +250,7 @@
                         <outlet property="imagenCancion" destination="I0u-dK-6wT" id="G1G-Lt-CYW"/>
                         <outlet property="labelCancionPrincipal" destination="LDd-Wv-EPb" id="bUy-Yi-E30"/>
                         <outlet property="proximasCanciones" destination="5Ob-cl-GcH" id="e6d-PM-hT8"/>
+                        <outlet property="votosRestantes" destination="43p-2z-9R0" id="eUD-J4-Mb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
