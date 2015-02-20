@@ -86,7 +86,7 @@
     if(!(sqlite3_open([ubicacionDB UTF8String], &sqliteDB) == SQLITE_OK)){
         NSLog(@"No se puede conectar con la BD");
     }
-    const char *sentenciaSQL = "SELECT * FROM canciones;";
+    const char *sentenciaSQL = "select * from canciones order by votos desc;";
     sqlite3_stmt *sqlStatement;
     if(sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
         NSLog(@"Problema al preparar el statement");
@@ -210,6 +210,67 @@
 -(Cancion*) cancionSegunIndice:(NSInteger) indiceDeCancion{
     
     return [self.listaCanciones objectAtIndex:indiceDeCancion];
+}
+
+
+
+
+-(NSNumber*) DuracionTop1{
+
+    
+    
+    //Comprobamos si la base de datos se ha abierto correctamente
+    if(sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK){
+        
+        NSLog(@"No se puede conectar con la BD");
+    }
+    
+    sqlite3_stmt *sqlStatement;
+    
+    const char *sentenciaSQL = "select * from canciones order by votos desc LIMIT 1;";
+    
+    //Cargamos en memoria los datos de la base de datos
+    if (sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
+        
+        NSLog(@"Problema al preparar el statement");
+    }
+    Cancion *cancion = [[Cancion alloc] init];
+
+    //Recorremos el restultado de la consulta
+        
+        cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
+        
+    return cancion.duracion;
+    
+}
+
+
+
+
+
+-(NSString*) DevuelveTop1Cancion{
+    NSString *po;
+    //Esta funcion obtiene las 5 primeras canciones mas votadas
+    NSString *ubicacionDB = [self rutaBD];
+    if(!(sqlite3_open([ubicacionDB UTF8String], &sqliteDB) == SQLITE_OK)){
+        NSLog(@"No se puede conectar con la BD");
+    }
+    const char *sentenciaSQL = "select * from canciones order by votos LIMIT 1;";
+    sqlite3_stmt *sqlStatement;
+    if(sqlite3_prepare_v2(sqliteDB, sentenciaSQL, -1, &sqlStatement, NULL) != SQLITE_OK){
+        NSLog(@"Problema al preparar el statement");
+        
+    }
+    po=@"";
+    Cancion *cancion = [[Cancion alloc] init];
+   while(sqlite3_step(sqlStatement) == SQLITE_ROW){
+       
+        cancion.id_cancion = [[NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 0)] stringValue];
+       
+   }
+    
+    return cancion.id_cancion;
+    
 }
 
 @end

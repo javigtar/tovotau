@@ -19,4 +19,7 @@
 
 -(void)modificarVotosCancion:(NSString*)id_cancion votosCancion:(NSInteger)votos;
 
+-(NSNumber*)DuracionTop1;
+
+-(NSString*)DevuelveTop1Cancion;
 @end

@@ -15,33 +15,48 @@
 
 @property (weak, nonatomic) IBOutlet MarqueeLabel *proximasCanciones;
 @property (nonatomic, strong) NSMutableArray *listaCanciones;
-
+@property (nonatomic, assign) BOOL reproduciendo;
 @end
 
 @implementation ReproduciendoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
+    self.reproduciendo=YES;
     //Instanciamos la clase engargada de obtener las canciones de la BD
     CancionesDAO *cancionesDAO = [[CancionesDAO alloc] init];
     
     //Añadimos las canciones de la BD a una MutableArray
     self.listaCanciones = [cancionesDAO obtenerCanciones];
-    
-   
+     CancionesDAO *cancionDAO = [[CancionesDAO alloc] init];
+ 
    //Bucle que se ejecutara cada 15 segundos llamando a la funcion para llamar al banner
     [NSTimer scheduledTimerWithTimeInterval:15.0f
                                      target:self selector:@selector(cambioImagenTemporal) userInfo:nil repeats:YES];
     
+   [NSTimer scheduledTimerWithTimeInterval:20.0f//pongo 20 segundos para la exposicion ya que por ahora no tenemos el tiempo de cada cancion real
+                                  target:self selector:@selector(reproducirCanciones) userInfo:nil repeats:YES];
+   
+    
     [self mostrarTop5Canciones];
     
    
-    
+ 
+
    
      
 }
+
+-(void)reproducirCanciones{
+ CancionesDAO *cancionDAO = [[CancionesDAO alloc] init];
+   NSString* top1 = [cancionDAO DevuelveTop1Cancion];
+ [cancionDAO modificarVotosCancion:top1 votosCancion:0];
+  
+   [self mostrarTop5Canciones];
+     // [self.view setNeedsDisplay];
+}
+
 
 -(void)modificarLabelAnimado:(NSString*) cadena{
    // NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:cadena];
@@ -116,7 +131,7 @@
     //cambio la imagen con efecto de imagen dissolve
     UIImage * toImage = [UIImage imageNamed:cancion];
     [UIView transitionWithView:self.banner
-                      duration:5.0
+                      duration:5
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         self.banner.image = toImage;
