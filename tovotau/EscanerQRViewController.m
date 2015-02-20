@@ -42,7 +42,6 @@
     highlightView.layer.borderWidth = 3;
     [self.view addSubview:highlightView];
     
-    self.codigoQRTexto.text = @"Escaneando...";
     self.codigoQRTexto.textAlignment = NSTextAlignmentCenter;
     
     session = [[AVCaptureSession alloc] init];
@@ -108,8 +107,7 @@
             self.codigoQRTexto.text = detectionString;
             break;
         }
-        else
-            self.codigoQRTexto.text = @"Escaneando...";
+        
     }
     
     highlightView.frame = highlightViewRect;
