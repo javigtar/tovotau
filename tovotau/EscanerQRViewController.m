@@ -106,8 +106,7 @@
         {
             self.codigoQRTexto.text = detectionString;
             break;
-        }
-        
+        }        
     }
     
     highlightView.frame = highlightViewRect;
