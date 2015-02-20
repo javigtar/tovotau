@@ -40,7 +40,7 @@
 - (id)init {
     
     //Ponemos por defecto 0 votos restantes
-    self.votosRestantes = [[NSNumber alloc] initWithInt:3];
+    self.votosRestantes = [[NSNumber alloc] initWithInt:20];
     
     return self;
 }

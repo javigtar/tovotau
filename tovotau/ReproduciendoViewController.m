@@ -198,7 +198,7 @@
     [nombreTop1 appendString:@" - "];
     [nombreTop1 appendString:top1Cancion.artista];
     
-    NSString *ImageURL = top1Cancion.imagen;
+    NSString *ImageURL = top1Cancion.imagenUrl;
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
     self.imagenCancion.image = [UIImage imageWithData:imageData];
     

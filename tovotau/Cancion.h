@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Cancion : NSObject
 
@@ -14,7 +15,7 @@
 @property (nonatomic) NSString *nombreCancion;
 @property (nonatomic) NSString *artista;
 @property (nonatomic) NSString *album;
-@property (nonatomic) NSString *imagen;
+@property (nonatomic) NSString *imagenUrl;
 @property (nonatomic) NSNumber *duracion;
 @property (nonatomic) NSNumber *votos;
 

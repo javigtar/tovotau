@@ -61,6 +61,7 @@
     return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     //Comprobamos si el array de canciones filtradas no es nulo para que muestre tantas filas como el total de canciones
@@ -114,10 +115,26 @@
     nombreCancion.text = cancion.nombreCancion;
     album.text = cancion.album;
     id_cancion.text = cancion.id_cancion;
-    votos.text = [cancion.votos stringValue];
+    votos.text = [cancion.votos stringValue];    
     
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cancion.imagen] options:NSDataReadingMapped error:nil];
-    imagen.image = [UIImage imageWithData:imageData];
+    
+    //get a dispatch queue
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);    
+   
+    //Descargamos la imagen en background
+    dispatch_async(concurrentQueue, ^{
+        
+        NSData *imagenData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:cancion.imagenUrl]];
+        
+        //Cuando finaliza la descarga asiganmos la imagen al UIImageView
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imagen.image = [UIImage imageWithData:imagenData];
+        });
+    });
+     
+    
+    
+    
     
     return cell;
 
@@ -232,7 +249,6 @@
     
     [informacion show];
 }
-
 
 /*
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString

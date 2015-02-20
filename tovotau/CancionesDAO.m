@@ -97,7 +97,7 @@
         cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
-        cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
+        cancion.imagenUrl = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];
         
         [top5 addObject:cancion];
         
@@ -157,7 +157,7 @@
         cancion.nombreCancion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
         cancion.artista = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
         cancion.album = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
-        cancion.imagen = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];        
+        cancion.imagenUrl = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 4)];        
         cancion.votos = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 5)];
         cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
         
@@ -169,6 +169,7 @@
 
 //Modifica los votos de una canción
 -(void)modificarVotosCancion:(NSString*)id_cancion votosCancion:(NSInteger)votos{
+    
     
     //Comprobamos si se puede conectar
     if((sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK)){
