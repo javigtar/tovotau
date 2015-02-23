@@ -226,7 +226,7 @@
     }else{       
         
         //Mostramos el alert con el mensaje
-        [self mostrarAlertView:@"Votos Insuficientes" mensajeAMostrar:@"No te quedan mas votos para seguir votando. CONSUME!!"];
+        [self mostrarAlertView:@"Votos Insuficientes" mensajeAMostrar:@"No te quedan mas votos para seguir votando."];
     }
     
 }

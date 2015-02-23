@@ -102,6 +102,13 @@
         [top5 addObject:cancion];
         
     }
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
+    
     return top5;
 
 }
@@ -167,11 +174,16 @@
         
     }
     
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
+    
 }
 
 //Modifica los votos de una canción
 -(void)modificarVotosCancion:(NSString*)id_cancion votosCancion:(NSInteger)votos{
-    
     
     //Comprobamos si se puede conectar
     if((sqlite3_open([[self rutaBD] UTF8String], &sqliteDB) != SQLITE_OK)){
@@ -239,6 +251,12 @@
     //Recorremos el restultado de la consulta
         
         cancion.duracion = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 6)];
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
         
     return cancion.duracion;
     
@@ -265,6 +283,12 @@
         cancion.id_cancion = [[NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 0)] stringValue];
        
    }
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
     
     return cancion.id_cancion;
     
@@ -296,16 +320,28 @@
     //Comprobamos si ha encontrado el código qr en la base de datos
     if (sqlite3_step(sqlStatement) == SQLITE_ROW) {
         
+        //Guardamos los votos restantes
+        NSNumber *votos = [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 0)];
+        
+        //Finalizamos el statement
+        sqlite3_finalize(sqlStatement);
+        
+        //Cerramos la conexion a la BD
+        sqlite3_close(sqliteDB);
+        
         //Devolvemos los votos restantes
-        return [NSNumber numberWithInt:(int) sqlite3_column_int(sqlStatement, 0)];
+        return votos;
     }
+    
+    //Finalizamos el statement
+    sqlite3_finalize(sqlStatement);
+    
+    //Cerramos la conexion a la BD
+    sqlite3_close(sqliteDB);
     
     //Si no lo ha encontrado devolvemos 0
     return [NSNumber numberWithInt:0];    
 
 }
-
-
-
 
 @end
