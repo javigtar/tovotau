@@ -15,6 +15,11 @@
 		EB2047D81A9668BB00E6B119 /* fondo-madera-negro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */; };
 		EB2047DE1A966D1500E6B119 /* dark2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047DD1A966D1500E6B119 /* dark2.jpg */; };
 		EB2047E01A966E4200E6B119 /* fondonegro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2047DF1A966E4200E6B119 /* fondonegro.jpg */; };
+		EB33169D1A9BF29B00CEA65B /* iphone4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3316991A9BF29B00CEA65B /* iphone4retina.png */; };
+		EB33169E1A9BF29B00CEA65B /* iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = EB33169A1A9BF29B00CEA65B /* iphone5.png */; };
+		EB33169F1A9BF29B00CEA65B /* iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = EB33169B1A9BF29B00CEA65B /* iphone6.png */; };
+		EB3316A01A9BF29B00CEA65B /* iphone6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = EB33169C1A9BF29B00CEA65B /* iphone6plus.png */; };
+		EB3316A21A9BF3C600CEA65B /* iphone6pluss.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3316A11A9BF3C600CEA65B /* iphone6pluss.png */; };
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
@@ -65,6 +70,11 @@
 		EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fondo-madera-negro.jpg"; sourceTree = "<group>"; };
 		EB2047DD1A966D1500E6B119 /* dark2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark2.jpg; sourceTree = "<group>"; };
 		EB2047DF1A966E4200E6B119 /* fondonegro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondonegro.jpg; sourceTree = "<group>"; };
+		EB3316991A9BF29B00CEA65B /* iphone4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone4retina.png; sourceTree = "<group>"; };
+		EB33169A1A9BF29B00CEA65B /* iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone5.png; sourceTree = "<group>"; };
+		EB33169B1A9BF29B00CEA65B /* iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6.png; sourceTree = "<group>"; };
+		EB33169C1A9BF29B00CEA65B /* iphone6plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6plus.png; sourceTree = "<group>"; };
+		EB3316A11A9BF3C600CEA65B /* iphone6pluss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6pluss.png; sourceTree = "<group>"; };
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
 		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -145,6 +155,18 @@
 			name = botones;
 			sourceTree = "<group>";
 		};
+		EB3316981A9BF28600CEA65B /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				EB3316A11A9BF3C600CEA65B /* iphone6pluss.png */,
+				EB3316991A9BF29B00CEA65B /* iphone4retina.png */,
+				EB33169A1A9BF29B00CEA65B /* iphone5.png */,
+				EB33169B1A9BF29B00CEA65B /* iphone6.png */,
+				EB33169C1A9BF29B00CEA65B /* iphone6plus.png */,
+			);
+			name = splash;
+			sourceTree = "<group>";
+		};
 		FB29CD491A88C894004CCF14 /* banners */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +236,7 @@
 		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				EB3316981A9BF28600CEA65B /* splash */,
 				EB2047DF1A966E4200E6B119 /* fondonegro.jpg */,
 				EB2047DD1A966D1500E6B119 /* dark2.jpg */,
 				EB2047D71A9668BB00E6B119 /* fondo-madera-negro.jpg */,
@@ -377,16 +400,21 @@
 				FB7EB7451A6664C6002E699D /* Main.storyboard in Resources */,
 				FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */,
 				EB2047DE1A966D1500E6B119 /* dark2.jpg in Resources */,
+				EB33169F1A9BF29B00CEA65B /* iphone6.png in Resources */,
 				EB2047D81A9668BB00E6B119 /* fondo-madera-negro.jpg in Resources */,
 				FB7EB74A1A6664C6002E699D /* LaunchScreen.xib in Resources */,
 				FBB2A71D1A947C2700AB6CD6 /* perfil.png in Resources */,
 				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
+				EB33169E1A9BF29B00CEA65B /* iphone5.png in Resources */,
 				EB2047E01A966E4200E6B119 /* fondonegro.jpg in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
 				594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */,
+				EB33169D1A9BF29B00CEA65B /* iphone4retina.png in Resources */,
 				FB29CD4B1A88C93D004CCF14 /* 3.jpg in Resources */,
 				FBB2A71E1A947C2700AB6CD6 /* qr.png in Resources */,
 				FBB2A71C1A947C2700AB6CD6 /* list.png in Resources */,
+				EB3316A01A9BF29B00CEA65B /* iphone6plus.png in Resources */,
+				EB3316A21A9BF3C600CEA65B /* iphone6pluss.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tovotau/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -553,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tovotau/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

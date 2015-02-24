@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pYv-Fi-E42">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pYv-Fi-E42">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -191,7 +191,6 @@
                             <constraint firstItem="QKv-9z-WOi" firstAttribute="top" secondItem="I0u-dK-6wT" secondAttribute="bottom" constant="37" id="9Sv-50-uFp">
                                 <variation key="heightClass=regular-widthClass=compact" constant="38"/>
                             </constraint>
-                            <constraint firstItem="I0u-dK-6wT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="9zL-tx-IbX"/>
                             <constraint firstItem="Dg7-9O-DVP" firstAttribute="top" secondItem="LDd-Wv-EPb" secondAttribute="bottom" constant="-375" id="DKL-D3-wFJ"/>
                             <constraint firstItem="LDd-Wv-EPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="FNG-MK-DWZ">
                                 <variation key="widthClass=compact" constant="79"/>
@@ -231,26 +230,26 @@
                                 <exclude reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DKL-D3-wFJ"/>
-                                <exclude reference="GCR-p8-G4a"/>
-                                <exclude reference="PV6-hn-ah7"/>
-                                <exclude reference="mya-u2-RwG"/>
-                                <exclude reference="vDt-UX-Gb8"/>
                                 <exclude reference="iZN-fJ-gS8"/>
-                                <exclude reference="Imc-vP-zOf"/>
-                                <exclude reference="ZLJ-av-1rn"/>
-                                <exclude reference="vjf-Jd-AbU"/>
+                                <exclude reference="4GU-de-qB4"/>
+                                <exclude reference="btQ-q6-Git"/>
+                                <exclude reference="FNG-MK-DWZ"/>
+                                <exclude reference="czV-Sg-1r3"/>
                                 <exclude reference="6ig-yb-UFF"/>
                                 <exclude reference="9Sv-50-uFp"/>
                                 <exclude reference="RW9-d5-86w"/>
                                 <exclude reference="cTK-ul-xNg"/>
-                                <exclude reference="FNG-MK-DWZ"/>
-                                <exclude reference="czV-Sg-1r3"/>
-                                <exclude reference="4GU-de-qB4"/>
-                                <exclude reference="btQ-q6-Git"/>
+                                <exclude reference="GCR-p8-G4a"/>
+                                <exclude reference="PV6-hn-ah7"/>
+                                <exclude reference="mya-u2-RwG"/>
+                                <exclude reference="vDt-UX-Gb8"/>
+                                <exclude reference="Gsf-9b-PHD"/>
+                                <exclude reference="DKL-D3-wFJ"/>
+                                <exclude reference="Imc-vP-zOf"/>
+                                <exclude reference="ZLJ-av-1rn"/>
+                                <exclude reference="vjf-Jd-AbU"/>
                                 <exclude reference="eSC-9Z-lSN"/>
                                 <exclude reference="rnu-VM-4cd"/>
-                                <exclude reference="Gsf-9b-PHD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -263,16 +262,16 @@
                                 <include reference="yKj-DZ-VHp"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="iZN-fJ-gS8"/>
+                                <include reference="4GU-de-qB4"/>
+                                <include reference="FNG-MK-DWZ"/>
+                                <include reference="czV-Sg-1r3"/>
                                 <include reference="GCR-p8-G4a"/>
                                 <include reference="PV6-hn-ah7"/>
                                 <include reference="vDt-UX-Gb8"/>
-                                <include reference="iZN-fJ-gS8"/>
                                 <include reference="Imc-vP-zOf"/>
                                 <include reference="ZLJ-av-1rn"/>
                                 <include reference="vjf-Jd-AbU"/>
-                                <include reference="FNG-MK-DWZ"/>
-                                <include reference="czV-Sg-1r3"/>
-                                <include reference="4GU-de-qB4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -281,16 +280,16 @@
                                 <include reference="QKv-9z-WOi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DKL-D3-wFJ"/>
-                                <include reference="mya-u2-RwG"/>
+                                <include reference="btQ-q6-Git"/>
                                 <include reference="6ig-yb-UFF"/>
                                 <include reference="9Sv-50-uFp"/>
                                 <include reference="RW9-d5-86w"/>
                                 <include reference="cTK-ul-xNg"/>
-                                <include reference="btQ-q6-Git"/>
+                                <include reference="mya-u2-RwG"/>
+                                <include reference="Gsf-9b-PHD"/>
+                                <include reference="DKL-D3-wFJ"/>
                                 <include reference="eSC-9Z-lSN"/>
                                 <include reference="rnu-VM-4cd"/>
-                                <include reference="Gsf-9b-PHD"/>
                             </mask>
                         </variation>
                     </view>
@@ -797,7 +796,6 @@
         <!--Lista Canciones-->
         <scene sceneID="O0U-rW-aCJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yIn-yi-57y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r5U-ZK-8f1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lista Canciones" id="SZK-ts-hoR"/>
                     <toolbarItems/>
@@ -810,6 +808,7 @@
                         <segue destination="WRT-9H-e8h" kind="relationship" relationship="rootViewController" id="tp0-GE-WF9"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIn-yi-57y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1299" y="1198"/>
         </scene>
