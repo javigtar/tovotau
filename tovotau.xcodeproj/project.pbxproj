@@ -20,6 +20,7 @@
 		EB33169F1A9BF29B00CEA65B /* iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = EB33169B1A9BF29B00CEA65B /* iphone6.png */; };
 		EB3316A01A9BF29B00CEA65B /* iphone6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = EB33169C1A9BF29B00CEA65B /* iphone6plus.png */; };
 		EB3316A21A9BF3C600CEA65B /* iphone6pluss.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3316A11A9BF3C600CEA65B /* iphone6pluss.png */; };
+		EB9B3FD71A9D232000936D53 /* icono tovotau in Resources */ = {isa = PBXBuildFile; fileRef = EB9B3FD61A9D232000936D53 /* icono tovotau */; };
 		FB0FC0B51A77A27100770279 /* ReproduciendoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */; };
 		FB29CD461A88B99C004CCF14 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD451A88B99C004CCF14 /* 2.jpg */; };
 		FB29CD481A88B9C0004CCF14 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB29CD471A88B9C0004CCF14 /* 1.jpg */; };
@@ -75,6 +76,7 @@
 		EB33169B1A9BF29B00CEA65B /* iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6.png; sourceTree = "<group>"; };
 		EB33169C1A9BF29B00CEA65B /* iphone6plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6plus.png; sourceTree = "<group>"; };
 		EB3316A11A9BF3C600CEA65B /* iphone6pluss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6pluss.png; sourceTree = "<group>"; };
+		EB9B3FD61A9D232000936D53 /* icono tovotau */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "icono tovotau"; sourceTree = "<group>"; };
 		FB0FC0B31A77A27100770279 /* ReproduciendoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReproduciendoViewController.h; sourceTree = "<group>"; };
 		FB0FC0B41A77A27100770279 /* ReproduciendoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReproduciendoViewController.m; sourceTree = "<group>"; };
 		FB29CD451A88B99C004CCF14 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		FB6298361A6D1DB100582767 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				EB9B3FD61A9D232000936D53 /* icono tovotau */,
 				EB3316981A9BF28600CEA65B /* splash */,
 				EB2047DF1A966E4200E6B119 /* fondonegro.jpg */,
 				EB2047DD1A966D1500E6B119 /* dark2.jpg */,
@@ -407,6 +410,7 @@
 				59DFABB71A927B4E009759C2 /* votar.png in Resources */,
 				EB33169E1A9BF29B00CEA65B /* iphone5.png in Resources */,
 				EB2047E01A966E4200E6B119 /* fondonegro.jpg in Resources */,
+				EB9B3FD71A9D232000936D53 /* icono tovotau in Resources */,
 				FB7EB7471A6664C6002E699D /* Images.xcassets in Resources */,
 				594F82231A960CFE00380D73 /* definitiva.sqlite in Resources */,
 				EB33169D1A9BF29B00CEA65B /* iphone4retina.png in Resources */,
@@ -575,6 +579,7 @@
 					"$(PROJECT_DIR)/tovotau/ZBarSDK",
 				);
 				PRODUCT_NAME = tovotau;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,6 +596,7 @@
 					"$(PROJECT_DIR)/tovotau/ZBarSDK",
 				);
 				PRODUCT_NAME = tovotau;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
